@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Dana Smith" => "dana.smith@upsight.com" }
+  s.author             = { "Upsight, Inc." => "support@upsight.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
