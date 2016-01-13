@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   s.ios.source_files  = "iOS/UpsightKit.framework/Versions/A/Headers/*.h"
   s.tvos.source_files  = "tvOS/UpsightKit.framework/Versions/A/Headers/*.h"
   s.ios.vendored_frameworks = "iOS/UpsightKit.framework"
-  s.tvos.vendored_frameworks = "tvOS/UpsightKit.framework"
+  s.tvos.vendored_frameworks = "tvOS/UpsightKitTvOS.framework"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
