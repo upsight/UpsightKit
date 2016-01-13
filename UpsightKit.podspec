@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "UpsightKit"
   s.version      = "4.0.5"
-  s.summary      = "A short description of UpsightKit."
+  s.summary      = "Upsight SDK for iOS and tvOS."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = { :type => "Commercial", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Anton Fedorchenko" => "anton.fedorchenko@upsight.com" }
+  s.author             = { "Dana Smith" => "dana.smith@upsight.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-	s.platform     = :ios, "7.0"
+	s.platforms = { :ios => "7.0", :tvos => "9.1" }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/UpsightKit.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/upsight/UpsightKit.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -77,8 +77,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "UpsightKit.framework/Versions/A/Headers/*.h"
-  s.vendored_frameworks = "UpsightKit.framework"
+  s.ios.source_files  = "iOS/UpsightKit.framework/Versions/A/Headers/*.h"
+  s.tvos.source_files  = "tvOS/UpsightKit.framework/Versions/A/Headers/*.h"
+  s.ios.vendored_frameworks = "iOS/UpsightKit.framework"
+  s.tvos.vendored_frameworks = "tvOS/UpsightKit.framework"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -87,7 +89,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "Foundation", "CoreTelephony", "AdSupport"
+  s.ios.framework  = "Foundation", "CoreTelephony", "AdSupport"
+  s.tvos.framework  = "Foundation", "AdSupport"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
