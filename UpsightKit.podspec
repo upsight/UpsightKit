@@ -25,6 +25,9 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    Upsight is the most comprehensive analytics and marketing platform for Web and mobile apps. We are building a business engine to help our customers better understand user behavior, decide what it means, and act to impact key goals.
+
+                    For more information visit www.upsight.com.  For in depth documentation and usage instructions of the Upsight product visit help.upsight.com
                    DESC
 
   s.homepage     = "http://www.upsight.com"
@@ -58,7 +61,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-	s.platforms = { :ios => "7.0", :tvos => "9.1" }
+  s.platforms = { :ios => "7.0", :tvos => "9.1" }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
