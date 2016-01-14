@@ -103,4 +103,12 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  # ――― prepare_command ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  #
+  #  A bash script that will be executed after the Pod is downloaded.
+
+  s.prepare_command = <<-CMD
+                        ./install_docsets.sh
+                      CMD
+
 end
