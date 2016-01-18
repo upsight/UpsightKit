@@ -1,23 +1,38 @@
 # Upsight iOS SDK
 
-####Integration
+####Manual Integration
 To start with, you need the UpsightKit framework stored on your machine
 
 1. Add the UpsightKit framework to your app in the Build Phases section of the target settings. Also add the CoreTelephony and AdSupport frameworks provided by Apple.
 1. In the Info section the target properties, add UpsightAppToken and UpsightAppSecret. These are of type `string` and were provided on the Upsight dashboard when you added your app.
 1. In the Build Settings section of the target, add -ObjC to the Other Linker Flags field.
 
-####Xcode Documentation
+#####Xcode Documentation
 The Upsight iOS SDK uses appledoc to generate visually appealing API method documentation in the form of HTML.
 These docs are fully indexed and browsable through Xcode.
 
-In order to use the appledoc, extract the [iOS SDK zip file](https://help.upsight.com/api-sdk-reference/downloads/) and run the following commands:
+When doing manual integration of the UpsightKit framework, you can optionally install the Upsight documentation so that it is available in Xcode. In order to do that, extract the [iOS SDK zip file](https://help.upsight.com/api-sdk-reference/downloads/) and run the following commands:
 
     $ ./install_docsets.sh
 
 Note: Installing the Upsight documentation will fail if you have not installed any documentation yet. If the installation process fails, navigate to the Downloads section of Xcode settings and download any other documentation modules. Then run the script again.
 
 To see the Upsight Documentation, click Help > Documentation and API Reference. On the left hand side, you will find the UpsightKit Documentation.
+
+
+####CocoaPods Integration
+Using [CocoaPods](https://guides.cocoapods.org) is the easiest way to integrate the SDK into your project. Simply add `pod 'UpsightKit'` to your `Podfile`. Here is an example of a Podfile with two targets, for iOS and tvOS apps:
+
+    target 'MyiOSApp' do
+        platform :ios, '8.0'
+        pod 'UpsightKit', '~> 4.0.5'
+    end
+
+    target 'MyTvOSApp' do
+        platform :tvos, '9.1'
+        pod 'UpsightKit', '~> 4.0.5'
+    end
+
 
 ####Debugging
 To start with, turn on full debug logging:
