@@ -74,9 +74,49 @@
         </Token>
         
         <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorInvalidParameters</TokenIdentifier>
+            <Abstract type="html">Invalid parameters were provided for the operation</Abstract>
+            <Declaration>UpsightErrorInvalidParameters</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
             <TokenIdentifier>//apple_ref/c/econst/UpsightErrorCannotExecuteAction</TokenIdentifier>
             <Abstract type="html">An action in an action map failed to execute</Abstract>
             <Declaration>UpsightErrorCannotExecuteAction</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorOperationInProgress</TokenIdentifier>
+            <Abstract type="html">An equivalent operation is already in progress</Abstract>
+            <Declaration>UpsightErrorOperationInProgress</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorPartnerTimeout</TokenIdentifier>
+            <Abstract type="html">A partner request timed out</Abstract>
+            <Declaration>UpsightErrorPartnerTimeout</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="32"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorPartnerInitialization</TokenIdentifier>
+            <Abstract type="html">The partner SDK failed to initialize</Abstract>
+            <Declaration>UpsightErrorPartnerInitialization</Declaration>
             
             <DeclaredIn>UpsightErrors.h</DeclaredIn>
             

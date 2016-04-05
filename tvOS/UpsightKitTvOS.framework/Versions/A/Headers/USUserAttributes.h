@@ -39,6 +39,7 @@ Note that you cannot programmatically add or remove User Attributes. They must b
 removed through the Info settings. Adding and removing User Attributes will cause a discontinuity
 in the data stored on Upsight's servers, so it is something you should do only with forethought
 and planning.*/
+
 @interface USUserAttributes : NSObject
 
 /** Sets a number value for an attribute specified by aKey. Note the actual type of the user
@@ -72,6 +73,25 @@ defined in the application plist file, unless you changed the values with <[USUs
 @param aKey Name of the user attribute whose value is to be returned.
 */
 + (NSString *)stringForKey:(NSString *)aKey;
+
+/** Sets a date value for an attribute specified by aKey. Note the actual type of the user
+ attribute defined in your application plist file should be Date, otherwise this method has
+ no effect.
+ 
+ @param aDate A new value for the user attribute indicated by aKey. If the value is nil or [USUserAttributes nilDate] it will not be transmitted to the server
+ @param aKey Name of the user attribute that should be changed.
+ */
++ (void)setDate:(NSDate *)aDate forKey:(NSString *)aKey;
+
+/** Accesses the value of a specified date user attribute. Returns the default value as
+ defined in the application plist file, unless you changed the values with <[USUserAttributes setDate:forKey:]>
+ 
+ @param aKey Name of the user attribute whose value is to be returned.
+ */
++ (NSDate *)dateForKey:(NSString *)aKey;
+
+/** A date that will not be transmitted to the server. */
++ (NSDate *)nilDate;
 
 /** Accesses the dictionary representation of user attributes defined in the application. The
 dictionary contains actual values, reflecting the changes made through the setters exposed

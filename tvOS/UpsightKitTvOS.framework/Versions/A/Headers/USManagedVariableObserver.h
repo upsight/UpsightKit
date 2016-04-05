@@ -6,8 +6,6 @@
 //  Copyright © 2015 Upsight. All rights reserved.
 //
 
-@import Foundation;
-
 @protocol USManagedVariableObserverDelegate;
 
 /** Abstracts an observer receiving events related to managed variables also referred to as UXM values.

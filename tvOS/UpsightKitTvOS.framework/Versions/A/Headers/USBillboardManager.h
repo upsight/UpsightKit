@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "USBillboard.h"
 
+@protocol USViewController;
+
+@protocol USViewControllerProvider <NSObject>
+
+- (id<USViewController>)provideViewContoller;
+
+@end
+
 /** Represents interface of a class managing billboards.*/
 @protocol USBillboardManager <NSObject>
 /** Provides access to billboards by their associated scope.
@@ -17,4 +25,5 @@
 @return A billboard with the requested scope.
 */
 - (id<USBillboard>)billboardForScope:(NSString *)aScope;
+
 @end

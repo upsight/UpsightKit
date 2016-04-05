@@ -30,6 +30,18 @@ typedef NS_ENUM(NSUInteger, UpsightError) {
     /// The framework encountered an HTTP error when attempting to deliver data to the Upsight server
     USDispatcherHTTPError,
     
+    /// Invalid parameters were provided for the operation
+    UpsightErrorInvalidParameters,
+    
     /// An action in an action map failed to execute
-    UpsightErrorCannotExecuteAction
+    UpsightErrorCannotExecuteAction,
+    
+    /// An equivalent operation is already in progress
+    UpsightErrorOperationInProgress,
+    
+    /// A partner request timed out
+    UpsightErrorPartnerTimeout,
+    
+    /// The partner SDK failed to initialize
+    UpsightErrorPartnerInitialization
 };
