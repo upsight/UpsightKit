@@ -93,6 +93,22 @@ defined in the application plist file, unless you changed the values with <[USUs
 /** A date that will not be transmitted to the server. */
 + (NSDate *)nilDate;
 
+/** Sets a boolean value for an attribute specified by aKey. Note the actual type of the user
+ attribute defined in your application plist file should be Boolean, otherwise this method has
+ no effect.
+ 
+ @param aBool A new value for the user attribute indicated by aKey.
+ @param aKey Name of the user attribute that should be changed.
+ */
++ (void)setBool:(BOOL)aBool forKey:(NSString *)aKey;
+
+/** Accesses the value of a specified number user attribute. Returns the default value as defined in the application
+ plist file, unless you changed the values with <[USUserAttributes setBool:forKey:]>
+ 
+ @param aKey Name of the user attribute whose value is to be returned.
+ */
++ (BOOL)boolForKey:(NSString *)aKey;
+
 /** Accesses the dictionary representation of user attributes defined in the application. The
 dictionary contains actual values, reflecting the changes made through the setters exposed
 by the class.*/
