@@ -104,13 +104,17 @@ Within your code you can retrieve and set values for the User Attributes you hav
 
 	NSNumber *aNumber = [USUserAttributes numberForKey:@"myNumberAttribute"];
 	NSString *aString = [USUserAttributes stringForKey:@"myStringAttribute"];
+	NSString *aDate = [USUserAttributes dateForKey:@"myDateAttribute"];
+	BOOL aBool = [USUserAttributes boolForKey:@"myBooleanAttribute"];	
 	
 This returns the default values as defined in the Info settings, unless you change the values, like this:
 
 	[USUserAttributes setNumber:@(10) forKey:@"myNumberAttribute"];
 	[USUserAttributes setString:@"aString" forKey:@"myStringAttribute"];
+	[USUserAttributes setDate:[NSDate date] forKey:@"myDateAttribute"];
+	[USUserAttributes setBool:NO forKey:@"myBooleanAttribute"];
 	
-Now, `NSNumber *aNumber = [USUserAttributes numberForKey:@"myNumberAttribute"];` will return 10 and `NSString *aString = [USUserAttributes stringForKey:@"myStringAttribute"];` will return aString.
+Now, `NSNumber *aNumber = [USUserAttributes numberForKey:@"myNumberAttribute"];` will return 10, `NSString *aString = [USUserAttributes stringForKey:@"myStringAttribute"];` will return aString, `[USUserAttributes dateForKey:@"myDateAttribute"]` will return the date and time when the `setDate:forKey:` method was called, and `BOOL aBool = [USUserAttributes boolForKey:@"myBooleanAttribute"]` will return NO.
 
 Note that you cannot programmatically add or remove User Attributes. They must be added and removed through the Info settings. Adding and removing User Attributes will cause a discontinuity in the data stored on Upsight's servers, so it is something you should do only with forethought and planning.
 
@@ -375,3 +379,13 @@ If you implement the optional `observer:didSynchronizeManagedVariables:` method,
 If you keep any references to Managed Variables that you access before the call to `observer:didSynchronizeManagedVariables:` you need to refresh those references afterward in order to see the new values.
 
 If you wish to prevent updates to the Managed Variables you can override `observerShouldSynchronizeManagedVariables:`. If you return `NO` from your implementation of this method none of the managed variables will be updated. This method is called every time a session starts, so you will have the chance to accept updates you previously rejected.
+
+#### SDK Size
+The Upsight SDK increases the size of what you'll submit to iTunesConnect by 450 KB. Adding the Mediation SDK will increase the size of an app by at most 3.1 MB. The impact will be reduced if your app already links against some or all of the frameworks the Mediation SDK depends on.
+
+Measurements were made by exporting ipa files from Xcode 7.2 using the "Prepare for upload to App Store" and comparing their size in Finder.
+
+| App | Base Size | With Platform | With Mediation |
+| --- | --------- | ------------- | -------------- | 
+| Test App 1 | 62 KB | 514 KB | 3.1 MB |
+| Test App 2 | 146 KB | 596 KB | 3.2 MB | 
