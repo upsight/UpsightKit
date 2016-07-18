@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/UpsightStorableObject.html">
+	<File path="Classes/UpsightDataStore.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/UpsightStorableObject</TokenIdentifier>
-			<Abstract type="html">UpsightStorableObject is the base class for all objects that can be stored in the UpsightDataStore.
-In addition to the requirement that objects are derived from UpsightStorableObject, custom objects ideally
-have properties of type NSString, NSNumber, NSArray, or NSDictionary. This guarantees that the data can be
-transferred to the Upsight servers, if necessary.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/UpsightDataStore</TokenIdentifier>
+			<Abstract type="html">This class provides a CoreData based implementation of UpsightDataStoreInterface</Abstract>
+			<DeclaredIn>UpsightDataStore.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -16,193 +13,51 @@ transferred to the Upsight servers, if necessary.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/setType:</TokenIdentifier>
-			<Abstract type="html">A string that identifies a group of objects with identical properties. For example, you could use the class&apos;s name. This is
-used during subscription to identify the set of objects you wish to observe. Objects with the same type must also have the same
-set of properties.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/UpsightDataStore/defaultStore</TokenIdentifier>
+			<Abstract type="html">This method always returns the same data store object. If you wisht to create a new instance of UpsightDataStore use one of the init methods rather than using the shared object.</Abstract>
+			<DeclaredIn>UpsightDataStore.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *type</Declaration>
+			<Declaration>+ (id&lt;UpsightDataStoreInterface&gt;)defaultStore</Declaration>
 			
 			
-			<Anchor>//api/name/type</Anchor>
+			<Anchor>//api/name/defaultStore</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/type</TokenIdentifier>
-			<Abstract type="html">A string that identifies a group of objects with identical properties. For example, you could use the class&apos;s name. This is
-used during subscription to identify the set of objects you wish to observe. Objects with the same type must also have the same
-set of properties.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UpsightDataStore/initWithDatabaseDirectoryURL:fileNamePrefix:</TokenIdentifier>
+			<Abstract type="html">Returns an object that implements the UpsightDataStoreInterface protocol using CoreData</Abstract>
+			<DeclaredIn>UpsightDataStore.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *type</Declaration>
-			
-			
-			<Anchor>//api/name/type</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/UpsightStorableObject/type</TokenIdentifier>
-			<Abstract type="html">A string that identifies a group of objects with identical properties. For example, you could use the class&apos;s name. This is
-used during subscription to identify the set of objects you wish to observe. Objects with the same type must also have the same
-set of properties.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy, readonly) NSString *type</Declaration>
-			
-			
-			<Anchor>//api/name/type</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/setVersion:</TokenIdentifier>
-			<Abstract type="html">The version of the object&apos;s definition. In combination with the type, this value is used to identify the set of properties
-stored for a particular object type. You should increment the version whenever you add, remove, or change one of the properties defined for the class.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSNumber *version</Declaration>
-			
-			
-			<Anchor>//api/name/version</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/version</TokenIdentifier>
-			<Abstract type="html">The version of the object&apos;s definition. In combination with the type, this value is used to identify the set of properties
-stored for a particular object type. You should increment the version whenever you add, remove, or change one of the properties defined for the class.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSNumber *version</Declaration>
-			
-			
-			<Anchor>//api/name/version</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/UpsightStorableObject/version</TokenIdentifier>
-			<Abstract type="html">The version of the object&apos;s definition. In combination with the type, this value is used to identify the set of properties
-stored for a particular object type. You should increment the version whenever you add, remove, or change one of the properties defined for the class.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSNumber *version</Declaration>
-			
-			
-			<Anchor>//api/name/version</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/setID:</TokenIdentifier>
-			<Abstract type="html">An identifier unique to each instance of this object type.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *ID</Declaration>
-			
-			
-			<Anchor>//api/name/ID</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/ID</TokenIdentifier>
-			<Abstract type="html">An identifier unique to each instance of this object type.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *ID</Declaration>
-			
-			
-			<Anchor>//api/name/ID</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/UpsightStorableObject/ID</TokenIdentifier>
-			<Abstract type="html">An identifier unique to each instance of this object type.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *ID</Declaration>
-			
-			
-			<Anchor>//api/name/ID</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/initWithType:</TokenIdentifier>
-			<Abstract type="html">Creates an unversioned instance of an UpsightStorableObject with the specified type.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>- (instancetype)initWithType:(NSString *)type</Declaration>
+			<Declaration>- (id)initWithDatabaseDirectoryURL:(NSURL *)directoryURL fileNamePrefix:(NSString *)prefix</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>type</Name>
-					<Abstract type="html">A string that uniquely identifies the object&apos;s class. In combination with the version, this value is used by the system to determine which properties are available on this object.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An unversioned instance of an UpsightStorableObject or a derived class.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithType:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/initWithType:version:ID:</TokenIdentifier>
-			<Abstract type="html">Creates an instance of an UpsightStorableObject with the specified type.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
-			
-			<Declaration>- (instancetype)initWithType:(NSString *)type version:(NSNumber *)aVersion ID:(NSString *)anID</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>type</Name>
-					<Abstract type="html">A string that uniquely identifies the object&apos;s class. In combination with the version, this value is used by the system to determine which properties are available on this object.</Abstract>
+					<Name>directoryURL</Name>
+					<Abstract type="html">An NSURL pointing to the folder where you would like the SQLite file to be saved</Abstract>
 				</Parameter><Parameter>
-					<Name>aVersion</Name>
-					<Abstract type="html">A string that identifies the version of the storable&apos;s class. In combination with the type, this value is used by the system to determine which properties are available on this object. Passing nil will create an unversioned instance. You should increment the version whenever you add, remove, or change one of the properties defined for the class.</Abstract>
-				</Parameter><Parameter>
-					<Name>anID</Name>
-					<Abstract type="html">A string that uniquely identifies the returned instance. Passing nil will cause the system to generate a unique ID for the instance</Abstract>
+					<Name>prefix</Name>
+					<Abstract type="html">The .sqlite will be added to this string and the result used as the name of the data base file</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">An instance of an UpsightStorableObject or a derived class.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithType:version:ID:</Anchor>
+			<ReturnValue><Abstract type="html">And object conforming to the UpsightDataStoreInterface protocol</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithDatabaseDirectoryURL:fileNamePrefix:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/initWithDictionaryRepresentation:</TokenIdentifier>
-			<Abstract type="html">Creates an instance of an UpsightStorableObject from the data contained in an NSDictionary.</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UpsightDataStore/initWithDataStoreURL:</TokenIdentifier>
+			<Abstract type="html">Returns an object that implements the UpsightDataStoreInterface protocol using CoreData</Abstract>
+			<DeclaredIn>UpsightDataStore.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithDictionaryRepresentation:(NSDictionary *)dictionaryRepresentation</Declaration>
+			<Declaration>- (id)initWithDataStoreURL:(NSURL *)aDataStoreURL</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>dictionaryRepresentation</Name>
-					<Abstract type="html">An NSDictionary whose keys correspond to the properties of the class to be instanced, and whose values will be used to set the values of the properties.</Abstract>
+					<Name>aDataStoreURL</Name>
+					<Abstract type="html">An NSURL identifying the full path and name of the file in which the datastore should be saved</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">An instance of an UpsightStorableObject or a derived class whose properties are initialized with the values stored in the dictionary.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithDictionaryRepresentation:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UpsightStorableObject/dictionaryRepresentation:</TokenIdentifier>
-			<Abstract type="html">Generates a dictionary whose keys are the property names of the receiver, and whose values are the current values of the receiever&apos;s properties</Abstract>
-			<DeclaredIn>UpsightStorableObject.h</DeclaredIn>
 			
-			<Declaration>- (NSDictionary *)dictionaryRepresentation:(NSError *__autoreleasing *)error</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>error</Name>
-					<Abstract type="html">Contains a description of the error if an NSDictionary cannot be created from the receiver.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An NSDictionary whose keys are the names of the receiver&apos;s properties and whose values are the current values of the receiver&apos;s properties.</Abstract></ReturnValue>
-			<Anchor>//api/name/dictionaryRepresentation:</Anchor>
+			<Anchor>//api/name/initWithDataStoreURL:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

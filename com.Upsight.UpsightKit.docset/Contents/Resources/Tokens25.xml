@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USManagedVariableObserver.html">
+	<File path="Protocols/USManagedType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USManagedVariableObserver</TokenIdentifier>
-			<Abstract type="html">Abstracts an observer receiving events related to managed variables also referred to as UXM values.
-The observer forwards events to its delegate, for more details see methods declared in USManagedVariableObserverDelegate protocol.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedType</TokenIdentifier>
+			<Abstract type="html">Base interface for objects representing UXM variables, dynamic values controlled from
+the dashboard and propagated to the application when as it runs.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
             
 			
 			<NodeRef refid="25"/>
@@ -14,38 +14,38 @@ The observer forwards events to its delegate, for more details see methods decla
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/setDelegate:</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedType/setTag:</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/tag</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/delegate</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedType/tag</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/tag</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USManagedVariableObserver/delegate</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfp/USManagedType/tag</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/tag</Anchor>
             <NodeRef refid="25"/>
 		</Token>
 		

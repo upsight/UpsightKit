@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/UpsightLoggerLevel.html">
+	<File path="Constants/UpsightError.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/UpsightLoggerLevel</TokenIdentifier>
-			<Abstract type="html">Every log message has an associated severity level. The log reporter uses the level to determine which messages should be displayed in the output window.
-You set the reporter&apos;s level with the defaultLogLevel: method of &lt;UpsightLogger&gt;. Any message with a level equal to or more severe than the setting is displayed. The log levels described below are ordered from most to least severe.</Abstract>
-			<DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/UpsightError</TokenIdentifier>
+			<Abstract type="html">Following are the error codes from the UpsightErrorDomain</Abstract>
+			<DeclaredIn>UpsightErrors.h</DeclaredIn>
             
 			
 			<NodeRef refid="33"/>
@@ -15,61 +14,111 @@ You set the reporter&apos;s level with the defaultLogLevel: method of &lt;Upsigh
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelOff</TokenIdentifier>
-            <Abstract type="html">Used to disable logging</Abstract>
-            <Declaration>UpsightLoggerLevelOff</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightDataStoreReadOnlyObject</TokenIdentifier>
+            <Abstract type="html">An attempt was made to update a read-only object. The objects delivered to observers are read-only</Abstract>
+            <Declaration>UpsightDataStoreReadOnlyObject</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
-            
-            <NodeRef refid="33"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelCritical</TokenIdentifier>
-            <Abstract type="html">Critical errors indicating the state when the system cannot continue to work, for example the data store cannot build core data stack</Abstract>
-            <Declaration>UpsightLoggerLevelCritical</Declaration>
-            
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
             
             <NodeRef refid="33"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelError</TokenIdentifier>
-            <Abstract type="html">Used to indicate errors during normal workflow, for example a storable object cannot be created with the given parameters.</Abstract>
-            <Declaration>UpsightLoggerLevelError</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightDataStoreNoDictionaryRepresentation</TokenIdentifier>
+            <Abstract type="html">The UpsightStorableObject could not be represented as an NSDictionary</Abstract>
+            <Declaration>UpsightDataStoreNoDictionaryRepresentation</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
-            
-            <NodeRef refid="33"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelWarning</TokenIdentifier>
-            <Abstract type="html">Used to indicate issues that might need attention, such as network failures, dead data store observers, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelWarning</Declaration>
-            
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
             
             <NodeRef refid="33"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelInfo</TokenIdentifier>
-            <Abstract type="html">Used to indicate information that might be of interest in a particular workflow, for example an operation is complete or failed for some well-known reason, no network connection, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelInfo</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightDataStoreNoJSONRepresentation</TokenIdentifier>
+            <Abstract type="html">The UpsightStorableObject could not be converted to a JSON representation</Abstract>
+            <Declaration>UpsightDataStoreNoJSONRepresentation</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
             
             <NodeRef refid="33"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelDebug</TokenIdentifier>
-            <Abstract type="html">Used to indicate information that might help to clarify the overall state of the system, data workflow, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelDebug</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightDataStoreObjectNotPreviouslyStored</TokenIdentifier>
+            <Abstract type="html">An attempt was made to remove an UpsightStorableObject that isn&apos;t in the data store</Abstract>
+            <Declaration>UpsightDataStoreObjectNotPreviouslyStored</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/USDispatcherServerError</TokenIdentifier>
+            <Abstract type="html">The Upsight server responded with an error when an UpsightStorableObject was delivered to it</Abstract>
+            <Declaration>USDispatcherServerError</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/USDispatcherHTTPError</TokenIdentifier>
+            <Abstract type="html">The framework encountered an HTTP error when attempting to deliver data to the Upsight server</Abstract>
+            <Declaration>USDispatcherHTTPError</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorInvalidParameters</TokenIdentifier>
+            <Abstract type="html">Invalid parameters were provided for the operation</Abstract>
+            <Declaration>UpsightErrorInvalidParameters</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorCannotExecuteAction</TokenIdentifier>
+            <Abstract type="html">An action in an action map failed to execute</Abstract>
+            <Declaration>UpsightErrorCannotExecuteAction</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorOperationInProgress</TokenIdentifier>
+            <Abstract type="html">An equivalent operation is already in progress</Abstract>
+            <Declaration>UpsightErrorOperationInProgress</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorPartnerTimeout</TokenIdentifier>
+            <Abstract type="html">A partner request timed out</Abstract>
+            <Declaration>UpsightErrorPartnerTimeout</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
+            
+            <NodeRef refid="33"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/UpsightErrorPartnerInitialization</TokenIdentifier>
+            <Abstract type="html">The partner SDK failed to initialize</Abstract>
+            <Declaration>UpsightErrorPartnerInitialization</Declaration>
+            
+            <DeclaredIn>UpsightErrors.h</DeclaredIn>
             
             <NodeRef refid="33"/>
         </Token>

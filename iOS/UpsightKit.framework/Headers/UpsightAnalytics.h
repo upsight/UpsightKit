@@ -15,5 +15,6 @@
 #import "USInAppPurchaseResolution.h"
 #import "USInAppPurchaseEvent.h"
 #import "USMilestoneEvent.h"
+#import "USAttributionEvent.h"
 #import "USEventFactory.h"
 #import "USUserAttributes.h"

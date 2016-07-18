@@ -28,6 +28,7 @@
 @class USPushRegistrationEvent;
 @class USPushUnregistrationEvent;
 @class USUXMEnumerateEvent;
+@class USAttributionEvent;
 
 /** A factory for Upsight events. Created events should be sent to Upsight server by calling
 <[USAnalyticsInterface record:]>.
@@ -201,4 +202,13 @@ from Upsight server.
 @param aPubData A dictionary with additional data provided by the publisher.
 */
 + (USUXMEnumerateEvent *)UXMEnumerateEventWithUXMSchema:(NSArray *)aSchema pubData:(NSDictionary *)aPubData;
+
+/** Creates an event to notify the backend of the attribution source for a new install.
+ 
+ @param aCampaign Advertising campaign associated with the install.
+ @param aCreative Advertising creative associated with the install.
+ @param aSource Advertising source associated with the install.
+ @param aPubData A dictionary with additional data provided by the publisher.
+ */
++ (USAttributionEvent *)attributionEventForCampaign:(NSString *)aCampaign creative:(NSString *)aCreative source:(NSString *)aSource pubData:(NSDictionary *)aPubData;
 @end

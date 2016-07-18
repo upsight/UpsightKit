@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/USMonetizationEvent.html">
+	<File path="Classes/USMilestoneEvent.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/USMonetizationEvent</TokenIdentifier>
-			<Abstract type="html">Event representing a monetary transaction, in which the user is paying the app developer for
-goods or services.</Abstract>
-			<DeclaredIn>USMonetizationEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/USMilestoneEvent</TokenIdentifier>
+			<Abstract type="html">An event indicating that a specific point in the application has been reached. This may represent an action taken or progress made by the user, a particular line/region of code, or any other point of interest.</Abstract>
+			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
             
 			
 			<NodeRef refid="8"/>
@@ -14,59 +13,58 @@ goods or services.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USMonetizationEvent/monetizationEventWithWithParameters:info:</TokenIdentifier>
-			<Abstract type="html">Convenience method for creating a monetization event. Events should be created using USEventFactory class.</Abstract>
-			<DeclaredIn>USMonetizationEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USMilestoneEvent/milestoneEventWithParameters:scope:</TokenIdentifier>
+			<Abstract type="html">Convenience method for creating a milestone event. Events should be created using USEventFactory class.</Abstract>
+			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)monetizationEventWithWithParameters:(USEventParameters *)aParameters info:(USMonetizationPurchaseInfo *)anInfo</Declaration>
+			<Declaration>+ (instancetype)milestoneEventWithParameters:(USEventParameters *)aParameters scope:(NSString *)aScope</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>aParameters</Name>
 					<Abstract type="html">Parameters of the event.</Abstract>
 				</Parameter><Parameter>
-					<Name>anInfo</Name>
-					<Abstract type="html">An object containing information about the monetary transaction. Refer to the
-&lt;USMonetizationPurchaceInfo&gt; class for more details.</Abstract>
+					<Name>aScope</Name>
+					<Abstract type="html">The scope describes the point in the application which has been reached.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized event.</Abstract></ReturnValue>
-			<Anchor>//api/name/monetizationEventWithWithParameters:info:</Anchor>
+			
+			<Anchor>//api/name/milestoneEventWithParameters:scope:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USMonetizationEvent/setInfo:</TokenIdentifier>
-			<Abstract type="html">Accessor to the monetary information passed at event creation time.</Abstract>
-			<DeclaredIn>USMonetizationEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/USMilestoneEvent/setScope:</TokenIdentifier>
+			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
+			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong, readonly) USMonetizationPurchaseInfo *info</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
 			
 			
-			<Anchor>//api/name/info</Anchor>
+			<Anchor>//api/name/scope</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USMonetizationEvent/info</TokenIdentifier>
-			<Abstract type="html">Accessor to the monetary information passed at event creation time.</Abstract>
-			<DeclaredIn>USMonetizationEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/USMilestoneEvent/scope</TokenIdentifier>
+			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
+			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong, readonly) USMonetizationPurchaseInfo *info</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
 			
 			
-			<Anchor>//api/name/info</Anchor>
+			<Anchor>//api/name/scope</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/USMonetizationEvent/info</TokenIdentifier>
-			<Abstract type="html">Accessor to the monetary information passed at event creation time.</Abstract>
-			<DeclaredIn>USMonetizationEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/USMilestoneEvent/scope</TokenIdentifier>
+			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
+			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong, readonly) USMonetizationPurchaseInfo *info</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
 			
 			
-			<Anchor>//api/name/info</Anchor>
+			<Anchor>//api/name/scope</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

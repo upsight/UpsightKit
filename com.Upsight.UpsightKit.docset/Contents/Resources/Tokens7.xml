@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/USMilestoneEvent.html">
+	<File path="Classes/USManagedVariable.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/USMilestoneEvent</TokenIdentifier>
-			<Abstract type="html">An event indicating that a specific point in the application has been reached. This may represent an action taken or progress made by the user, a particular line/region of code, or any other point of interest.</Abstract>
-			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/USManagedVariable</TokenIdentifier>
+			<Abstract type="html">Represents interface for accessing UXM variables. If a variable was never changed on
+the dashboard, the returned object will have a default value as it is defined in the variable&apos;s
+schema, in UpsightUXMVariables.plist.</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
             
 			
 			<NodeRef refid="7"/>
@@ -13,58 +15,70 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USMilestoneEvent/milestoneEventWithParameters:scope:</TokenIdentifier>
-			<Abstract type="html">Convenience method for creating a milestone event. Events should be created using USEventFactory class.</Abstract>
-			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USManagedVariable/managedStringWithTag:</TokenIdentifier>
+			<Abstract type="html">Accessor to variables of string type.</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)milestoneEventWithParameters:(USEventParameters *)aParameters scope:(NSString *)aScope</Declaration>
+			<Declaration>+ (id&lt;USManagedString&gt;)managedStringWithTag:(NSString *)aTag</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>aParameters</Name>
-					<Abstract type="html">Parameters of the event.</Abstract>
-				</Parameter><Parameter>
-					<Name>aScope</Name>
-					<Abstract type="html">The scope describes the point in the application which has been reached.</Abstract>
+					<Name>aTag</Name>
+					<Abstract type="html">Unique tag identifying variable that is to be accessed.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/milestoneEventWithParameters:scope:</Anchor>
+			<Anchor>//api/name/managedStringWithTag:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USMilestoneEvent/setScope:</TokenIdentifier>
-			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
-			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USManagedVariable/managedIntegerWithTag:</TokenIdentifier>
+			<Abstract type="html">Accessor to variables of integer type.</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
+			<Declaration>+ (id&lt;USManagedInteger&gt;)managedIntegerWithTag:(NSString *)aTag</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aTag</Name>
+					<Abstract type="html">Unique tag identifying variable that is to be accessed.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/scope</Anchor>
+			<Anchor>//api/name/managedIntegerWithTag:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USMilestoneEvent/scope</TokenIdentifier>
-			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
-			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USManagedVariable/managedFloatWithTag:</TokenIdentifier>
+			<Abstract type="html">Accessor to variables of floating type.</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
+			<Declaration>+ (id&lt;USManagedFloat&gt;)managedFloatWithTag:(NSString *)aTag</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aTag</Name>
+					<Abstract type="html">Unique tag identifying variable that is to be accessed.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/scope</Anchor>
+			<Anchor>//api/name/managedFloatWithTag:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/USMilestoneEvent/scope</TokenIdentifier>
-			<Abstract type="html">Accessor to the scope passed at event creation time.</Abstract>
-			<DeclaredIn>USMilestoneEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USManagedVariable/managedBooleanWithTag:</TokenIdentifier>
+			<Abstract type="html">Accessor to variables of boolean type.</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *scope</Declaration>
+			<Declaration>+ (id&lt;USManagedBoolean&gt;)managedBooleanWithTag:(NSString *)aTag</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aTag</Name>
+					<Abstract type="html">Unique tag identifying variable that is to be accessed.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/scope</Anchor>
+			<Anchor>//api/name/managedBooleanWithTag:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

@@ -68,6 +68,10 @@
 		
 		<option value="//api/name/recordAnalyticsEventWithName:properties:">+ recordAnalyticsEventWithName:properties:</option>
 		
+		<option value="//api/name/recordAttributionEventForCampaign:creative:source:">+ recordAttributionEventForCampaign:creative:source:</option>
+		
+		<option value="//api/name/recordAttributionEventForCampaign:creative:source:properties:">+ recordAttributionEventForCampaign:creative:source:properties:</option>
+		
 		<option value="//api/name/recordInAppPurchaseEventWithResolution:product:quantity:price:currency:transactionIdentifier:properties:">+ recordInAppPurchaseEventWithResolution:product:quantity:price:currency:transactionIdentifier:properties:</option>
 		
 		<option value="//api/name/recordMilestoneEventForScope:">+ recordMilestoneEventForScope:</option>
@@ -640,6 +644,137 @@ verification by the Upsight server.</p>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/recordAttributionEventForCampaign:creative:source:" title="recordAttributionEventForCampaign:creative:source:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/recordAttributionEventForCampaign:creative:source:">+&nbsp;recordAttributionEventForCampaign:creative:source:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An event that to notifies the backend of the attribution source for a new install.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)recordAttributionEventForCampaign:(NSString *)<em>campaign</em> creative:(NSString *)<em>creative</em> source:(NSString *)<em>source</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCampaign</code></th>
+						<td><p>Advertising campaign associated with the install.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCreative</code></th>
+						<td><p>Advertising creative associated with the install.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSource</code></th>
+						<td><p>Advertising source associated with the install.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Upsight.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/recordAttributionEventForCampaign:creative:source:properties:" title="recordAttributionEventForCampaign:creative:source:properties:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/recordAttributionEventForCampaign:creative:source:properties:">+&nbsp;recordAttributionEventForCampaign:creative:source:properties:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An event that to notifies the backend of the attribution source for a new install.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)recordAttributionEventForCampaign:(NSString *)<em>campaign</em> creative:(NSString *)<em>creative</em> source:(NSString *)<em>source</em> properties:(NSDictionary *)<em>properties</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>properties</code></th>
+						<td><p>A dictionary containing any information you would like to associate with this event.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSource</code></th>
+						<td><p>The network source for the creative.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCreative</code></th>
+						<td><p>The ID for the creative receiving attribution.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCampaign</code></th>
+						<td><p>The campaign ID for this creative.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Upsight.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/billboardForScope:" title="billboardForScope:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/billboardForScope:">+&nbsp;billboardForScope:</a></code>
 </h3>
@@ -1043,7 +1178,7 @@ It is recommended that you begin your integration with <code>UpsightLoggerLevelD
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Upsight. All rights reserved. Updated: 2016-04-15</p>
+						<p class="copyright">Copyright &copy; 2016 Upsight. All rights reserved. Updated: 2016-07-08</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

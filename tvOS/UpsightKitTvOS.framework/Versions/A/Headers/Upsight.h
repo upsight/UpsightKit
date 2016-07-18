@@ -107,6 +107,23 @@ For more details about adding the framework to your application, see the [integr
  */
 + (void)recordMilestoneEventForScope:(NSString *)scope properties:(NSDictionary *)properties;
 
+/** An event that to notifies the backend of the attribution source for a new install.
+ 
+ @param aCampaign Advertising campaign associated with the install.
+ @param aCreative Advertising creative associated with the install.
+ @param aSource Advertising source associated with the install.
+ */
++ (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source;
+
+/** An event that to notifies the backend of the attribution source for a new install.
+ 
+ @param aCampaign The campaign ID for this creative.
+ @param aCreative The ID for the creative receiving attribution.
+ @param aSource The network source for the creative.
+ @param properties A dictionary containing any information you would like to associate with this event.
+ */
++ (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source properties:(NSDictionary *)properties;
+
 /** Retrieves the <USBillboard> object associated with a specific point of interest within the application. Setting a delegate on the billboard
  allows you to control the display of any content associated with the scope.
 
