@@ -27,6 +27,7 @@
 						<NodeRef refid="14"/>
 						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
 						
 					</Subnodes>
 				</Node>
@@ -37,7 +38,6 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="17"/>
 						<NodeRef refid="18"/>
 						<NodeRef refid="19"/>
 						<NodeRef refid="20"/>
@@ -51,6 +51,8 @@
 						<NodeRef refid="28"/>
 						<NodeRef refid="29"/>
 						<NodeRef refid="30"/>
+						<NodeRef refid="31"/>
+						<NodeRef refid="32"/>
 						
 					</Subnodes>
 				</Node>
@@ -60,11 +62,11 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="31"/>
-						<NodeRef refid="32"/>
 						<NodeRef refid="33"/>
 						<NodeRef refid="34"/>
 						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
 						
 					</Subnodes>
 				</Node>
@@ -74,8 +76,8 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="36"/>
-                        <NodeRef refid="37"/>
+                        <NodeRef refid="38"/>
+                        <NodeRef refid="39"/>
                         
                     </Subnodes>
                 </Node>
@@ -448,6 +450,39 @@
             
         </Node>
 		<Node id="13" type="file" documentType="reference">
+            <Name>USSessionInfo</Name>
+            <Path>Classes/USSessionInfo.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/USSessionInfo.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/USSessionInfo.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/USSessionInfo.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/USSessionInfo.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="14" type="file" documentType="reference">
             <Name>USUserAttributes</Name>
             <Path>Classes/USUserAttributes.html</Path>
             
@@ -474,7 +509,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="14" type="file" documentType="reference">
+		<Node id="15" type="file" documentType="reference">
             <Name>Upsight</Name>
             <Path>Classes/Upsight.html</Path>
             
@@ -501,7 +536,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="15" type="file" documentType="reference">
+		<Node id="16" type="file" documentType="reference">
             <Name>UpsightDataStore</Name>
             <Path>Classes/UpsightDataStore.html</Path>
             
@@ -534,7 +569,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="16" type="file" documentType="reference">
+		<Node id="17" type="file" documentType="reference">
             <Name>UpsightStorableObject</Name>
             <Path>Classes/UpsightStorableObject.html</Path>
             
@@ -569,7 +604,7 @@
         </Node>
 		
 		
-        <Node id="17" type="file" documentType="reference">
+        <Node id="18" type="file" documentType="reference">
             <Name>USAnalyticsInterface</Name>
             <Path>Protocols/USAnalyticsInterface.html</Path>
             
@@ -596,7 +631,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="18" type="file" documentType="reference">
+		<Node id="19" type="file" documentType="reference">
             <Name>USBillboard</Name>
             <Path>Protocols/USBillboard.html</Path>
             
@@ -623,7 +658,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="19" type="file" documentType="reference">
+		<Node id="20" type="file" documentType="reference">
             <Name>USBillboardDelegate</Name>
             <Path>Protocols/USBillboardDelegate.html</Path>
             
@@ -650,7 +685,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="20" type="file" documentType="reference">
+		<Node id="21" type="file" documentType="reference">
             <Name>USBillboardManager</Name>
             <Path>Protocols/USBillboardManager.html</Path>
             
@@ -677,7 +712,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="21" type="file" documentType="reference">
+		<Node id="22" type="file" documentType="reference">
             <Name>USManagedBoolean</Name>
             <Path>Protocols/USManagedBoolean.html</Path>
             
@@ -704,7 +739,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="22" type="file" documentType="reference">
+		<Node id="23" type="file" documentType="reference">
             <Name>USManagedFloat</Name>
             <Path>Protocols/USManagedFloat.html</Path>
             
@@ -731,7 +766,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="23" type="file" documentType="reference">
+		<Node id="24" type="file" documentType="reference">
             <Name>USManagedInteger</Name>
             <Path>Protocols/USManagedInteger.html</Path>
             
@@ -758,7 +793,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="24" type="file" documentType="reference">
+		<Node id="25" type="file" documentType="reference">
             <Name>USManagedString</Name>
             <Path>Protocols/USManagedString.html</Path>
             
@@ -785,7 +820,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="25" type="file" documentType="reference">
+		<Node id="26" type="file" documentType="reference">
             <Name>USManagedType</Name>
             <Path>Protocols/USManagedType.html</Path>
             
@@ -812,7 +847,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="26" type="file" documentType="reference">
+		<Node id="27" type="file" documentType="reference">
             <Name>USManagedVariableObserver</Name>
             <Path>Protocols/USManagedVariableObserver.html</Path>
             
@@ -839,7 +874,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="27" type="file" documentType="reference">
+		<Node id="28" type="file" documentType="reference">
             <Name>USManagedVariableObserverDelegate</Name>
             <Path>Protocols/USManagedVariableObserverDelegate.html</Path>
             
@@ -866,7 +901,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="28" type="file" documentType="reference">
+		<Node id="29" type="file" documentType="reference">
             <Name>USPurchase</Name>
             <Path>Protocols/USPurchase.html</Path>
             
@@ -893,7 +928,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="29" type="file" documentType="reference">
+		<Node id="30" type="file" documentType="reference">
             <Name>USReward</Name>
             <Path>Protocols/USReward.html</Path>
             
@@ -920,7 +955,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="30" type="file" documentType="reference">
+		<Node id="31" type="file" documentType="reference">
             <Name>UpsightDataStoreInterface</Name>
             <Path>Protocols/UpsightDataStoreInterface.html</Path>
             
@@ -947,39 +982,66 @@
             </Subnodes>
             
         </Node>
+		<Node id="32" type="file" documentType="reference">
+            <Name>UpsightSessionDelegate</Name>
+            <Path>Protocols/UpsightSessionDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/UpsightSessionDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/UpsightSessionDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/UpsightSessionDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
 		
-        <Node id="31" type="file" documentType="reference">
+        <Node id="33" type="file" documentType="reference">
             <Name>USBillboardError</Name>
             <Path>Constants/USBillboardError.html</Path>
             
         </Node>
-		<Node id="32" type="file" documentType="reference">
+		<Node id="34" type="file" documentType="reference">
             <Name>USPurchaseResolution</Name>
             <Path>Constants/USPurchaseResolution.html</Path>
             
         </Node>
-		<Node id="33" type="file" documentType="reference">
+		<Node id="35" type="file" documentType="reference">
             <Name>UpsightError</Name>
             <Path>Constants/UpsightError.html</Path>
             
         </Node>
-		<Node id="34" type="file" documentType="reference">
+		<Node id="36" type="file" documentType="reference">
             <Name>UpsightLoggerLevel</Name>
             <Path>Constants/UpsightLoggerLevel.html</Path>
             
         </Node>
-		<Node id="35" type="file" documentType="reference">
+		<Node id="37" type="file" documentType="reference">
             <Name>UpsightObservableAction</Name>
             <Path>Constants/UpsightObservableAction.html</Path>
             
         </Node>
 		
-        <Node id="36" type="file" documentType="reference">
+        <Node id="38" type="file" documentType="reference">
             <Name>UpsightDataStoreCompletion</Name>
             <Path>Blocks/UpsightDataStoreCompletion.html</Path>
             
         </Node>
-        <Node id="37" type="file" documentType="reference">
+        <Node id="39" type="file" documentType="reference">
             <Name>UpsightDataStoreObjectsCompletion</Name>
             <Path>Blocks/UpsightDataStoreObjectsCompletion.html</Path>
             

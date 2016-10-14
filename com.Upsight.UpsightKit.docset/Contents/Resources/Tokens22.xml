@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USManagedFloat.html">
+	<File path="Protocols/USManagedBoolean.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USManagedFloat</TokenIdentifier>
-			<Abstract type="html">Represents interface for UXM variables of floating type.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedBoolean</TokenIdentifier>
+			<Abstract type="html">Represents interface for UXM variables of boolean type.</Abstract>
+			<DeclaredIn>USManagedBoolean.h</DeclaredIn>
             
 			
 			<NodeRef refid="22"/>
@@ -13,38 +13,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedFloat/setFloatValue:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedBoolean/setBoolValue:</TokenIdentifier>
 			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<DeclaredIn>USManagedBoolean.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, assign, readonly) BOOL boolValue</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/boolValue</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedFloat/floatValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedBoolean/boolValue</TokenIdentifier>
 			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<DeclaredIn>USManagedBoolean.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, assign, readonly) BOOL boolValue</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/boolValue</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USManagedFloat/floatValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/USManagedBoolean/boolValue</TokenIdentifier>
 			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<DeclaredIn>USManagedBoolean.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, assign, readonly) BOOL boolValue</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/boolValue</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		

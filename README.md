@@ -25,12 +25,12 @@ Using [CocoaPods](https://guides.cocoapods.org) is the easiest way to integrate 
 
     target 'MyiOSApp' do
         platform :ios, '8.0'
-        pod 'UpsightKit', '~> 4.0.5'
+        pod 'UpsightKit', '~> 4.2.4'
     end
 
     target 'MyTvOSApp' do
         platform :tvos, '9.1'
-        pod 'UpsightKit', '~> 4.0.5'
+        pod 'UpsightKit', '~> 4.2.4'
     end
 
 

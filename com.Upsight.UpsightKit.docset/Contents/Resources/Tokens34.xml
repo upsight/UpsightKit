@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/UpsightLoggerLevel.html">
+	<File path="Constants/USPurchaseResolution.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/UpsightLoggerLevel</TokenIdentifier>
-			<Abstract type="html">Every log message has an associated severity level. The log reporter uses the level to determine which messages should be displayed in the output window.
-You set the reporter&apos;s level with the defaultLogLevel: method of &lt;UpsightLogger&gt;. Any message with a level equal to or more severe than the setting is displayed. The log levels described below are ordered from most to least severe.</Abstract>
-			<DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/USPurchaseResolution</TokenIdentifier>
+			<Abstract type="html">Represents the type of monetary transaction that took place. To create events of the USInAppPurchaseEvent class use the following mapping between the USPurchaseResolution and SKPaymentTransaction enumerations:</Abstract>
+			<DeclaredIn>USInAppPurchaseResolution.h</DeclaredIn>
             
 			
 			<NodeRef refid="34"/>
@@ -15,61 +14,41 @@ You set the reporter&apos;s level with the defaultLogLevel: method of &lt;Upsigh
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelOff</TokenIdentifier>
-            <Abstract type="html">Used to disable logging</Abstract>
-            <Declaration>UpsightLoggerLevelOff</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/USPurchaseResolutionBuy</TokenIdentifier>
+            <Abstract type="html">A &apos;buy&apos; represents a purchase was made.</Abstract>
+            <Declaration>USPurchaseResolutionBuy</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
-            
-            <NodeRef refid="34"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelCritical</TokenIdentifier>
-            <Abstract type="html">Critical errors indicating the state when the system cannot continue to work, for example the data store cannot build core data stack</Abstract>
-            <Declaration>UpsightLoggerLevelCritical</Declaration>
-            
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>USInAppPurchaseResolution.h</DeclaredIn>
             
             <NodeRef refid="34"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelError</TokenIdentifier>
-            <Abstract type="html">Used to indicate errors during normal workflow, for example a storable object cannot be created with the given parameters.</Abstract>
-            <Declaration>UpsightLoggerLevelError</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/USPurchaseResolutionCancel</TokenIdentifier>
+            <Abstract type="html">A &apos;cancel&apos; indicates that the user cancelled the transaction before making the purchase.</Abstract>
+            <Declaration>USPurchaseResolutionCancel</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
-            
-            <NodeRef refid="34"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelWarning</TokenIdentifier>
-            <Abstract type="html">Used to indicate issues that might need attention, such as network failures, dead data store observers, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelWarning</Declaration>
-            
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>USInAppPurchaseResolution.h</DeclaredIn>
             
             <NodeRef refid="34"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelInfo</TokenIdentifier>
-            <Abstract type="html">Used to indicate information that might be of interest in a particular workflow, for example an operation is complete or failed for some well-known reason, no network connection, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelInfo</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/USPurchaseResolutionFraud</TokenIdentifier>
+            <Abstract type="html">A &apos;fraud&apos; indicates that a fraud was detected in the purchase workflow. The SDK doesn&apos;t set the resolution to fraud, but the server might.</Abstract>
+            <Declaration>USPurchaseResolutionFraud</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>USInAppPurchaseResolution.h</DeclaredIn>
             
             <NodeRef refid="34"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/UpsightLoggerLevelDebug</TokenIdentifier>
-            <Abstract type="html">Used to indicate information that might help to clarify the overall state of the system, data workflow, etc.</Abstract>
-            <Declaration>UpsightLoggerLevelDebug</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/USPurchaseResolutionRefund</TokenIdentifier>
+            <Abstract type="html">A &apos;refund&apos; would be issued after the purchase, reversing it.</Abstract>
+            <Declaration>USPurchaseResolutionRefund</Declaration>
             
-            <DeclaredIn>UpsightLoggerLevel.h</DeclaredIn>
+            <DeclaredIn>USInAppPurchaseResolution.h</DeclaredIn>
             
             <NodeRef refid="34"/>
         </Token>
