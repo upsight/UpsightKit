@@ -37,4 +37,10 @@ schema, in UpsightUXMVariables.plist.*/
 @param aTag Unique tag identifying variable that is to be accessed.
 */
 + (id<USManagedBoolean>)managedBooleanWithTag:(NSString *)aTag;
+
+/** Accessor to all variables
+ 
+ */
++ ( NSDictionary *) allManagedVariables;
+
 @end

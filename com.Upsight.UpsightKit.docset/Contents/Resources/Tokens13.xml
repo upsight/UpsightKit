@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/USUserAttributes.html">
+	<File path="Classes/USSessionInfo.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/USUserAttributes</TokenIdentifier>
-			<Abstract type="html">User Attributes are properties you define which appear on every event sent to the Upsight
-servers. You must first define the attributes in the Info section of your project&apos;s settings.
-	
-1. Add a new row to your project&apos;s Info list and name it UpsightUserAttributes
-1. Set the new row&apos;s type to Dictionary
-2. Click on the disclosure triangle to the left of UpsightUserAttributes
-3. Add a new row for each of the User Attributes you want to include, providing a name, type,
-and default value for each</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/USSessionInfo</TokenIdentifier>
+			<Abstract type="html">Information about an Upsight session.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -20,188 +13,106 @@ and default value for each</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/setNumber:forKey:</TokenIdentifier>
-			<Abstract type="html">Sets a number value for an attribute specified by aKey. Note the actual type of the user
-attribute defined in your application plist file should be Number, otherwise this method has
-no effect.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/setSessionNumber:</TokenIdentifier>
+			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
 			
-			<Declaration>+ (void)setNumber:(NSNumber *)aNumber forKey:(NSString *)aKey</Declaration>
+			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
+			
+			
+			<Anchor>//api/name/sessionNumber</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/sessionNumber</TokenIdentifier>
+			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
+			
+			
+			<Anchor>//api/name/sessionNumber</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/USSessionInfo/sessionNumber</TokenIdentifier>
+			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
+			
+			
+			<Anchor>//api/name/sessionNumber</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/setSessionStartTime:</TokenIdentifier>
+			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
+			
+			
+			<Anchor>//api/name/sessionStartTime</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/sessionStartTime</TokenIdentifier>
+			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
+			
+			
+			<Anchor>//api/name/sessionStartTime</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/USSessionInfo/sessionStartTime</TokenIdentifier>
+			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
+			
+			
+			<Anchor>//api/name/sessionStartTime</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USSessionInfo/setUpsightSessionDelegate:</TokenIdentifier>
+			<Abstract type="html">Sets the delegate class inside the upsight SDK in order to receive information about the session lifecycle.
+You may set the delegate to nil to clear out the delegate.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>+ (void)setUpsightSessionDelegate:(nullable NSObject&lt;UpsightSessionDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>aNumber</Name>
-					<Abstract type="html">A new value for the user attribute indicated by aKey.</Abstract>
-				</Parameter><Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute that should be changed.</Abstract>
+					<Name>delegate.</Name>
+					<Abstract type="html">An weakly retained delegate object to which the sdk will attempt to report session lifecycle events</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setNumber:forKey:</Anchor>
+			<Anchor>//api/name/setUpsightSessionDelegate:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/numberForKey:</TokenIdentifier>
-			<Abstract type="html">Accesses the value of a specified number user attribute. Returns the default value as defined in the application
-plist file, unless you changed the values with [USUserAttributes setNumber:forKey:]</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USSessionInfo/getLatestSessionInfo</TokenIdentifier>
+			<Abstract type="html">Gets information about the current Upsight session. Or if no session is active, will return the
+most recent session information. If no session has been recorded, then a default object with
+sessionNumber of nil, and sessionStartTime of 0 will be returned.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
 			
-			<Declaration>+ (NSNumber *)numberForKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute whose value is to be returned.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/numberForKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/setString:forKey:</TokenIdentifier>
-			<Abstract type="html">Sets a string value for an attribute specified by aKey. Note the actual type of the user
-attribute defined in your application plist file should be String, otherwise this method has
-no effect.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (void)setString:(NSString *)aString forKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aString</Name>
-					<Abstract type="html">A new value for the user attribute indicated by aKey.</Abstract>
-				</Parameter><Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute that should be changed.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setString:forKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/stringForKey:</TokenIdentifier>
-			<Abstract type="html">Accesses the value of a specified string user attribute. Returns the default value as
-defined in the application plist file, unless you changed the values with [USUserAttributes setString:forKey:]</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)stringForKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute whose value is to be returned.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/stringForKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/setDate:forKey:</TokenIdentifier>
-			<Abstract type="html">Sets a date value for an attribute specified by aKey. Note the actual type of the user
-attribute defined in your application plist file should be Date, otherwise this method has
-no effect.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (void)setDate:(NSDate *)aDate forKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aDate</Name>
-					<Abstract type="html">A new value for the user attribute indicated by aKey. If the value is nil or [USUserAttributes nilDate] it will not be transmitted to the server</Abstract>
-				</Parameter><Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute that should be changed.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setDate:forKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/dateForKey:</TokenIdentifier>
-			<Abstract type="html">Accesses the value of a specified date user attribute. Returns the default value as
-defined in the application plist file, unless you changed the values with [USUserAttributes setDate:forKey:]</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (NSDate *)dateForKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute whose value is to be returned.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/dateForKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/nilDate</TokenIdentifier>
-			<Abstract type="html">A date that will not be transmitted to the server.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (NSDate *)nilDate</Declaration>
+			<Declaration>+ (nonnull USSessionInfo *)getLatestSessionInfo</Declaration>
 			
 			
-			<Anchor>//api/name/nilDate</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/setBool:forKey:</TokenIdentifier>
-			<Abstract type="html">Sets a boolean value for an attribute specified by aKey. Note the actual type of the user
-attribute defined in your application plist file should be Boolean, otherwise this method has
-no effect.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (void)setBool:(BOOL)aBool forKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aBool</Name>
-					<Abstract type="html">A new value for the user attribute indicated by aKey.</Abstract>
-				</Parameter><Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute that should be changed.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setBool:forKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/boolForKey:</TokenIdentifier>
-			<Abstract type="html">Accesses the value of a specified number user attribute. Returns the default value as defined in the application
-plist file, unless you changed the values with [USUserAttributes setBool:forKey:]</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (BOOL)boolForKey:(NSString *)aKey</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>aKey</Name>
-					<Abstract type="html">Name of the user attribute whose value is to be returned.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/boolForKey:</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USUserAttributes/dictionaryRepresentation</TokenIdentifier>
-			<Abstract type="html">Accesses the dictionary representation of user attributes defined in the application. The
-dictionary contains actual values, reflecting the changes made through the setters exposed
-by the class.</Abstract>
-			<DeclaredIn>USUserAttributes.h</DeclaredIn>
-			
-			<Declaration>+ (NSDictionary *)dictionaryRepresentation</Declaration>
-			
-			
-			<Anchor>//api/name/dictionaryRepresentation</Anchor>
+			<Anchor>//api/name/getLatestSessionInfo</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

@@ -82,6 +82,18 @@ schema, in UpsightUXMVariables.plist.</Abstract>
             <NodeRef refid="7"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USManagedVariable/allManagedVariables</TokenIdentifier>
+			<Abstract type="html">Accessor to all variables</Abstract>
+			<DeclaredIn>USManagedVariable.h</DeclaredIn>
+			
+			<Declaration>+ (NSDictionary *)allManagedVariables</Declaration>
+			
+			
+			<Anchor>//api/name/allManagedVariables</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
         
         
 	</File>

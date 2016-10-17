@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USPurchase.html">
+	<File path="Protocols/USManagedVariableObserverDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USPurchase</TokenIdentifier>
-			<Abstract type="html">Abstracts Upsight purchase, an object that gets propagated from the server to the
-application. When the application receives a purchase from the SDK it is expected to
-perform in-app purchase procedure and pass the purchase to a user.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedVariableObserverDelegate</TokenIdentifier>
+			<Abstract type="html">Represents interface of USManagedVariableObserver&apos;s delegate.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
             
 			
 			<NodeRef refid="28"/>
@@ -15,74 +13,41 @@ perform in-app purchase procedure and pass the purchase to a user.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/setProductIdentifier:</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserverDelegate/observerShouldSynchronizeManagedVariables:</TokenIdentifier>
+			<Abstract type="html">Requests confirmation that pending Managed Variable updates should be applied.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
-			
-			
-			<Anchor>//api/name/productIdentifier</Anchor>
+			<Declaration>- (BOOL)observerShouldSynchronizeManagedVariables:(nonnull id&lt;USManagedVariableObserver&gt;)anObserver</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>anObserver</Name>
+					<Abstract type="html">An observer that observed the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the pending UXM changes should be applied, NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/observerShouldSynchronizeManagedVariables:</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/productIdentifier</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserverDelegate/observer:didSynchronizeManagedVariables:</TokenIdentifier>
+			<Abstract type="html">Notifies the delegate of the end of variables synchronization. At the time this method is
+called, the system has finished variables synchronization which is a good point to access new
+values through USManagedVariable class methods.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
+			<Declaration>- (void)observer:(nonnull id&lt;USManagedVariableObserver&gt;)anObserver didSynchronizeManagedVariables:(nonnull NSArray *)updatedVariableTags</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>anObserver</Name>
+					<Abstract type="html">An observer that observed the event.</Abstract>
+				</Parameter><Parameter>
+					<Name>updatedVariableTags</Name>
+					<Abstract type="html">Tags of UXM variables that were updated during synchronization.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/productIdentifier</Anchor>
-            <NodeRef refid="28"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USPurchase/productIdentifier</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
-			
-			
-			<Anchor>//api/name/productIdentifier</Anchor>
-            <NodeRef refid="28"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/setQuantity:</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
-			
-			
-			<Anchor>//api/name/quantity</Anchor>
-            <NodeRef refid="28"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/quantity</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
-			
-			
-			<Anchor>//api/name/quantity</Anchor>
-            <NodeRef refid="28"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USPurchase/quantity</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
-			
-			
-			<Anchor>//api/name/quantity</Anchor>
+			<Anchor>//api/name/observer:didSynchronizeManagedVariables:</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		

@@ -13,6 +13,7 @@
 #import "UpsightAnalytics.h"
 #import "USServiceManager.h"
 #import "USBillboards.h"
+#import "USSessionInfo.h"
 
 #if !TARGET_OS_TV
 #import "USPush.h"
