@@ -13,6 +13,7 @@
 @protocol UpsightDataStoreInterface;
 @protocol USManagedVariableObserver;
 @protocol USBillboard;
+@protocol UpsightSessionDelegate;
 @class CLLocation;
 
 /** This is the main class you use to interface with the Upsight framework. It has a number of class methods you use to send events,
@@ -162,4 +163,6 @@ For more details about adding the framework to your application, see the [integr
 /** You set a delegate on the Managed Variable Observer if you wish to control the timing of updates to Managed Variables. */
 + (id<USManagedVariableObserver>)variableObserver;
 
+
 @end
+

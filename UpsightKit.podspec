@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "UpsightKit"
-  s.version      = "4.2.3"
+  s.version      = "4.2.4"
   s.summary      = "Upsight SDK for iOS and tvOS."
 
   # This description is used to generate tags and improve search results.
