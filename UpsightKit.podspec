@@ -92,8 +92,10 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.ios.framework  = "Foundation", "CoreTelephony", "AdSupport"
+  s.ios.framework  = "Foundation", "CoreTelephony", "AdSupport", "MediaPlayer"
+  s.ios.library = "xml2"
   s.tvos.framework  = "Foundation", "AdSupport"
+  
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
