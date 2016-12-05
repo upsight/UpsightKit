@@ -23,4 +23,8 @@
 
 + (USInstallationTracker *)installationTracker;
 
+
+@property (nonatomic, strong) NSNumber * storedMessageID;
+@property (nonatomic, strong) NSNumber * storedCampaignID;
+
 @end
