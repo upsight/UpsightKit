@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>USSessionInfo Class Reference</title>
+	<title></title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	
 </head>
 <body class="appledoc">
 	<header>
@@ -43,37 +43,9 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
-	
 
 	
-	
-	<option value="tasks">Tasks</option>
-	
-	
 
-	
-	
-	<optgroup label="Properties">
-		
-		<option value="//api/name/sessionNumber">sessionNumber</option>
-		
-		<option value="//api/name/sessionStartTime">sessionStartTime</option>
-		
-	</optgroup>
-	
-
-	
-	<optgroup label="Class Methods">
-		
-		<option value="//api/name/getLatestSessionInfo">+ getLatestSessionInfo</option>
-		
-		<option value="//api/name/setUpsightSessionDelegate:">+ setUpsightSessionDelegate:</option>
-		
-	</optgroup>
-	
-
-	
 	
 </select>
 						</label>
@@ -87,238 +59,22 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">USSessionInfo Class Reference</h1>
+					<h1 class="title"></h1>
 
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>USSessionInfo.h</td>
-</tr>
-						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Information about an <a href="../Classes/Upsight.html">Upsight</a> session.</p>
-					</div>
-					
-					
 
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/sessionNumber" title="sessionNumber"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionNumber">&nbsp;&nbsp;sessionNumber</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, nullable) NSNumber *sessionNumber</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sessionStartTime" title="sessionStartTime"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionStartTime">&nbsp;&nbsp;sessionStartTime</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The start time of the session in seconds. If No session has been recorded defaults to 0.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) NSTimeInterval sessionStartTime</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setUpsightSessionDelegate:" title="setUpsightSessionDelegate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setUpsightSessionDelegate:">+&nbsp;setUpsightSessionDelegate:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sets the delegate class inside the upsight SDK in order to receive information about the session lifecycle.
-You may set the delegate to nil to clear out the delegate.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (void)setUpsightSessionDelegate:(nullable NSObject&lt;UpsightSessionDelegate&gt; *)<em>delegate</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>delegate.</code></th>
-						<td><p>An weakly retained delegate object to which the sdk will attempt to report session lifecycle events</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getLatestSessionInfo" title="getLatestSessionInfo"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getLatestSessionInfo">+&nbsp;getLatestSessionInfo</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Gets information about the current <a href="../Classes/Upsight.html">Upsight</a> session. Or if no session is active, will return the
-most recent session information. If no session has been recorded, then a default object with
-<a href="#//api/name/sessionNumber">sessionNumber</a> of nil, and <a href="#//api/name/sessionStartTime">sessionStartTime</a> of 0 will be returned.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (nonnull USSessionInfo *)getLatestSessionInfo</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
 					
 
                     
-                    
-          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Upsight. All rights reserved. Updated: 2016-12-05</p>
+						<p class="copyright">Copyright &copy; 2017 Upsight. All rights reserved. Updated: 2017-03-03</p>
 						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>
