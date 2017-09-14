@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USPurchase.html">
+	<File path="Protocols/USManagedVariableObserver.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USPurchase</TokenIdentifier>
-			<Abstract type="html">Abstracts Upsight purchase, an object that gets propagated from the server to the
-application. When the application receives a purchase from the SDK it is expected to
-perform in-app purchase procedure and pass the purchase to a user.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedVariableObserver</TokenIdentifier>
+			<Abstract type="html">Abstracts an observer receiving events related to managed variables also referred to as UXM values.
+The observer forwards events to its delegate, for more details see methods declared in USManagedVariableObserverDelegate protocol.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
             
 			
 			<NodeRef refid="29"/>
@@ -15,74 +14,38 @@ perform in-app purchase procedure and pass the purchase to a user.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/setProductIdentifier:</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/setDelegate:</TokenIdentifier>
+			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
+			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
 			
 			
-			<Anchor>//api/name/productIdentifier</Anchor>
+			<Anchor>//api/name/delegate</Anchor>
             <NodeRef refid="29"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/productIdentifier</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/delegate</TokenIdentifier>
+			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
+			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
 			
 			
-			<Anchor>//api/name/productIdentifier</Anchor>
+			<Anchor>//api/name/delegate</Anchor>
             <NodeRef refid="29"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USPurchase/productIdentifier</TokenIdentifier>
-			<Abstract type="html">iTunes product identifier.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfp/USManagedVariableObserver/delegate</TokenIdentifier>
+			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
+			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
-			
-			
-			<Anchor>//api/name/productIdentifier</Anchor>
-            <NodeRef refid="29"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/setQuantity:</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
+			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
 			
 			
-			<Anchor>//api/name/quantity</Anchor>
-            <NodeRef refid="29"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USPurchase/quantity</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
-			
-			
-			<Anchor>//api/name/quantity</Anchor>
-            <NodeRef refid="29"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USPurchase/quantity</TokenIdentifier>
-			<Abstract type="html">Quantity of the items to purchase.</Abstract>
-			<DeclaredIn>USPurchase.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
-			
-			
-			<Anchor>//api/name/quantity</Anchor>
+			<Anchor>//api/name/delegate</Anchor>
             <NodeRef refid="29"/>
 		</Token>
 		

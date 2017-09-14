@@ -13,6 +13,7 @@
 @protocol USBillboardManager;
 @protocol USActionMapManagerInterface;
 @class USInstallationTracker;
+@class USPushData;
 
 @interface USServiceManager : NSObject
 
@@ -24,7 +25,6 @@
 + (USInstallationTracker *)installationTracker;
 
 
-@property (nonatomic, strong) NSNumber * storedMessageID;
-@property (nonatomic, strong) NSNumber * storedCampaignID;
+@property (nonatomic, strong) USPushData * storedPushData;
 
 @end

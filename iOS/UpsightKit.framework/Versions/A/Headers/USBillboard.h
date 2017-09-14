@@ -12,6 +12,8 @@
 @protocol USBillboardDelegate;
 @protocol USReward;
 @protocol USPurchase;
+@protocol USDataPayload;
+@protocol USContentHint;
 
 /** An abstraction representing place for presenting marketing content such as an interstitial,
 opt-in data collection, more games widget, in-app store, etc..
@@ -65,8 +67,9 @@ that is currently presented on screen.
 /** A delegate method that is called when the billboard is about to present its contents.
 
 @param aBillboard A billboard that is about to present its contents.
+@param aHint A <UpsightContentHint> noting the type of content to be displayed by the billboard.
 */
-- (void)billboardWillAppear:(id<USBillboard>)aBillboard;
+- (void)billboardWillAppear:(id<USBillboard>)aBillboard withContentHint:(id<USContentHint>)aHint;
 
 /** A delegate method that is called right after the billboard presents its contents.
 
@@ -85,6 +88,13 @@ that is currently presented on screen.
 @param aBillboard A billboard who's content was dismissed.
 */
 - (void)billboardDidDismiss:(id<USBillboard>)aBillboard;
+
+/** A delegate method that is called if a billboard contains a data payload.
+ 
+@param aBillboard A billboard containing a data payload.
+@param aData The <USDataPayload> object.
+ */
+- (void)billboard:(id<USBillboard>)aBillboard didReceiveData:(id<USDataPayload>)aDataPayload;
 
 /** A delegate method that is called when a content presented in the billboard unlocks a
 reward.

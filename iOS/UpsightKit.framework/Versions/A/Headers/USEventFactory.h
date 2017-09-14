@@ -29,6 +29,7 @@
 @class USPushUnregistrationEvent;
 @class USUXMEnumerateEvent;
 @class USAttributionEvent;
+@class USPushData;
 
 /** A factory for Upsight events. Created events should be sent to Upsight server by calling
 <[USAnalyticsInterface record:]>.
@@ -178,7 +179,7 @@ followed with a new session start.
 @param aCampaignID If the push notification was sent as part of a campaign, the identifier for the campaign.
 @param aPubData A dictionary with additional data provided by the publisher.
 */
-+ (USPushReceivedEvent *)pushReceivedEventWithMessageID:(NSNumber *)aMessageID campaignID:(NSNumber *)aCampaignID pubData:(NSDictionary *)aPubData;
++ (USPushReceivedEvent *)pushReceivedEventWithMessagePushData:(USPushData *) pushData pubData:(NSDictionary *)aPubData;
 
 /** Creates an event that is used to register a device token to be able to send push notifications
 from Upsight server.

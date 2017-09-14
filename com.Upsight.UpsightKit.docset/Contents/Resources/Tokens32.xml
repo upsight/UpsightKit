@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/UpsightSessionDelegate.html">
+	<File path="Protocols/USReward.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/UpsightSessionDelegate</TokenIdentifier>
-			<Abstract type="html">Optionally implemented delegate protocol to allow hooks into Upsight session creation.
-&lt;p/&gt;</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USReward</TokenIdentifier>
+			<Abstract type="html">Abstracts Upsight reward, an object that gets propagated from the server to the
+application and eventually is expected to be passed to a user.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
             
 			
 			<NodeRef refid="32"/>
@@ -14,72 +14,110 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightSessionWillStart:</TokenIdentifier>
-			<Abstract type="html">Called when a new session is about to start. It is guaranteed to run before any event is
-recorded, so this gives an opportunity for the application to set initial event attributes.
-&lt;p/&gt;
-This block is executed synchronously and should be fast-returning.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/setProductIdentifier:</TokenIdentifier>
+			<Abstract type="html">Unique identifier of a reward.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
 			
-			<Declaration>- (void)upsightSessionWillStart:(nonnull USSessionInfo *)previousSessionInfo</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>previousSessionInfo</Name>
-					<Abstract type="html">Information about the previous Upsight session. If there is no
-previous session, a nil sessionNumber is sent.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
 			
-			<Anchor>//api/name/upsightSessionWillStart:</Anchor>
+			
+			<Anchor>//api/name/productIdentifier</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightSessionDidStart</TokenIdentifier>
-			<Abstract type="html">Called when a new session is created. And current session Info is now available
-&lt;p/&gt;
-This block is executed synchronously and should be fast-returning.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/productIdentifier</TokenIdentifier>
+			<Abstract type="html">Unique identifier of a reward.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
 			
-			<Declaration>- (void)upsightSessionDidStart</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
 			
 			
-			<Anchor>//api/name/upsightSessionDidStart</Anchor>
+			<Anchor>//api/name/productIdentifier</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightSessionWillResume:</TokenIdentifier>
-			<Abstract type="html">Called when an existing session is about to be extended. It is guaranteed to run before any
-event is recorded in this extended part of the session, so this gives an opportunity for the
-application to set initial event attributes.
-&lt;p/&gt;
-This block is executed synchronously and should be fast-returning.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfp/USReward/productIdentifier</TokenIdentifier>
+			<Abstract type="html">Unique identifier of a reward.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
 			
-			<Declaration>- (void)upsightSessionWillResume:(nonnull USSessionInfo *)resumedSessionInfo</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>resumedSessionInfo</Name>
-					<Abstract type="html">Information about the extended Upsight session.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, readonly) NSString *productIdentifier</Declaration>
 			
-			<Anchor>//api/name/upsightSessionWillResume:</Anchor>
+			
+			<Anchor>//api/name/productIdentifier</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightSessionDidResume</TokenIdentifier>
-			<Abstract type="html">Called when an existing session is extended.
-&lt;p/&gt;
-This block is executed synchronously and should be fast-returning.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/setQuantity:</TokenIdentifier>
+			<Abstract type="html">Property representing the number of reward items.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
 			
-			<Declaration>- (void)upsightSessionDidResume</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
 			
 			
-			<Anchor>//api/name/upsightSessionDidResume</Anchor>
+			<Anchor>//api/name/quantity</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/quantity</TokenIdentifier>
+			<Abstract type="html">Property representing the number of reward items.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
+			
+			
+			<Anchor>//api/name/quantity</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/USReward/quantity</TokenIdentifier>
+			<Abstract type="html">Property representing the number of reward items.</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger quantity</Declaration>
+			
+			
+			<Anchor>//api/name/quantity</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/setSignatureData:</TokenIdentifier>
+			<Abstract type="html">Property containing an NSData object that can be used locally or on a server to validate that a given reward and quantity originated on the Upsight server</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSData *signatureData</Declaration>
+			
+			
+			<Anchor>//api/name/signatureData</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/USReward/signatureData</TokenIdentifier>
+			<Abstract type="html">Property containing an NSData object that can be used locally or on a server to validate that a given reward and quantity originated on the Upsight server</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSData *signatureData</Declaration>
+			
+			
+			<Anchor>//api/name/signatureData</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/USReward/signatureData</TokenIdentifier>
+			<Abstract type="html">Property containing an NSData object that can be used locally or on a server to validate that a given reward and quantity originated on the Upsight server</Abstract>
+			<DeclaredIn>USReward.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSData *signatureData</Declaration>
+			
+			
+			<Anchor>//api/name/signatureData</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		

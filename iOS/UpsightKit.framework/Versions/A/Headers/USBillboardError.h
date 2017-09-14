@@ -15,5 +15,11 @@ FOUNDATION_EXTERN NSString *const USBillboardErrorDomain;
 typedef NS_ENUM(NSUInteger, USBillboardError)
 {
     /// Indicates that the SDK is not able to pass context to a content unit web view.
-    USBillboardErrorLoadContext = 1000
+    USBillboardErrorLoadContext = 1000,
+    // indictates that the SDK is not able to pass in a response to the Action to a content unit web view
+    USBillboardErrorLoadResponse = 1001,
+    // indictates that the SDK is not able to pass in a response to the Action to a content unit web view
+    USBillboardErrorLoadAction = 1002,
+    // indictates that the SDK is not able to load in time
+    USBillboardErrorLoadTimeout = 1003
 };

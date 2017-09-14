@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol USBillboard;
+@class USPushData;
 
 /** `USPush` class provides the ability to register for remote notifications sent through Apple
 Push Notification Service.
@@ -111,7 +112,7 @@ application delegate method to let the receiver process a notification.
 that is passed from the system to your application delegate.
 */
 + (void)handleRemoteNotificationWithUserInfo:(NSDictionary *)aUserInfo;
-+ (void)extractMessageID:(NSNumber **)messageID campaignID:(NSNumber **)campaignID userInfo:(NSDictionary *)aUserInfo;
++ (USPushData *)extractMessageDataFromUserInfo:(NSDictionary *)aUserInfo;
 
 /** Push notifications sent from Upsight Dashboard can be associated with different content,
 such as announcement, virtual goods promotion, etc. A push billboard is used to present

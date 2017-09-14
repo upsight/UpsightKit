@@ -17,3 +17,5 @@
 #import "USManagedFloat.h"
 #import "USManagedBoolean.h"
 #import "USManagedVariableObserver.h"
+#import "USContentHint.h"
+#import "USDataPayload.h"

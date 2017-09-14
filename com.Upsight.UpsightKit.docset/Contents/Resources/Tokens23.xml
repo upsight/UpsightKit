@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USManagedFloat.html">
+	<File path="Protocols/USContentHint.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USManagedFloat</TokenIdentifier>
-			<Abstract type="html">Represents interface for UXM variables of floating type.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USContentHint</TokenIdentifier>
+			<Abstract type="html">Abstracts Upsight content hint, an object that gets propagated from the server to the
+application.</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
             
 			
 			<NodeRef refid="23"/>
@@ -13,38 +14,110 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedFloat/setFloatValue:</TokenIdentifier>
-			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USContentHint/setProperties:</TokenIdentifier>
+			<Abstract type="html">A dictionary of properties related to the content hint</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSDictionary *properties</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/properties</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedFloat/floatValue</TokenIdentifier>
-			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USContentHint/properties</TokenIdentifier>
+			<Abstract type="html">A dictionary of properties related to the content hint</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSDictionary *properties</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/properties</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USManagedFloat/floatValue</TokenIdentifier>
-			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
-			<DeclaredIn>USManagedFloat.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfp/USContentHint/properties</TokenIdentifier>
+			<Abstract type="html">A dictionary of properties related to the content hint</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) float floatValue</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSDictionary *properties</Declaration>
 			
 			
-			<Anchor>//api/name/floatValue</Anchor>
+			<Anchor>//api/name/properties</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/USContentHint/setContentType:</TokenIdentifier>
+			<Abstract type="html">The type of content unit associated with this billboard represented as a string
+Content types can be added dynamically, but here is a list of types as of the release v4.4.0 of the SDK:
+    &quot;unknown&quot;,
+    &quot;announcement&quot;,
+    &quot;internalcrosspromotion&quot;,
+    &quot;rewards&quot;,
+    &quot;virtualgoodspromotion&quot;,
+    &quot;opt_in&quot;,
+    &quot;ads&quot;,
+    &quot;more_games&quot;,
+    &quot;video_campaign&quot;,
+    &quot;custom_view&quot;,
+    &quot;mediation&quot;</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *contentType</Declaration>
+			
+			
+			<Anchor>//api/name/contentType</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/USContentHint/contentType</TokenIdentifier>
+			<Abstract type="html">The type of content unit associated with this billboard represented as a string
+Content types can be added dynamically, but here is a list of types as of the release v4.4.0 of the SDK:
+    &quot;unknown&quot;,
+    &quot;announcement&quot;,
+    &quot;internalcrosspromotion&quot;,
+    &quot;rewards&quot;,
+    &quot;virtualgoodspromotion&quot;,
+    &quot;opt_in&quot;,
+    &quot;ads&quot;,
+    &quot;more_games&quot;,
+    &quot;video_campaign&quot;,
+    &quot;custom_view&quot;,
+    &quot;mediation&quot;</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *contentType</Declaration>
+			
+			
+			<Anchor>//api/name/contentType</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/USContentHint/contentType</TokenIdentifier>
+			<Abstract type="html">The type of content unit associated with this billboard represented as a string
+Content types can be added dynamically, but here is a list of types as of the release v4.4.0 of the SDK:
+    &quot;unknown&quot;,
+    &quot;announcement&quot;,
+    &quot;internalcrosspromotion&quot;,
+    &quot;rewards&quot;,
+    &quot;virtualgoodspromotion&quot;,
+    &quot;opt_in&quot;,
+    &quot;ads&quot;,
+    &quot;more_games&quot;,
+    &quot;video_campaign&quot;,
+    &quot;custom_view&quot;,
+    &quot;mediation&quot;</Abstract>
+			<DeclaredIn>USContentHint.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *contentType</Declaration>
+			
+			
+			<Anchor>//api/name/contentType</Anchor>
             <NodeRef refid="23"/>
 		</Token>
 		

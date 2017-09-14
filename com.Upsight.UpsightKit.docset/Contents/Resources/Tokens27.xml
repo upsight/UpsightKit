@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USManagedVariableObserver.html">
+	<File path="Protocols/USManagedString.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USManagedVariableObserver</TokenIdentifier>
-			<Abstract type="html">Abstracts an observer receiving events related to managed variables also referred to as UXM values.
-The observer forwards events to its delegate, for more details see methods declared in USManagedVariableObserverDelegate protocol.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedString</TokenIdentifier>
+			<Abstract type="html">Represents interface for UXM variables of string type.</Abstract>
+			<DeclaredIn>USManagedString.h</DeclaredIn>
             
 			
 			<NodeRef refid="27"/>
@@ -14,38 +13,38 @@ The observer forwards events to its delegate, for more details see methods decla
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/setDelegate:</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedString/setStringValue:</TokenIdentifier>
+			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
+			<DeclaredIn>USManagedString.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *stringValue</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/stringValue</Anchor>
             <NodeRef refid="27"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserver/delegate</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedString/stringValue</TokenIdentifier>
+			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
+			<DeclaredIn>USManagedString.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *stringValue</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/stringValue</Anchor>
             <NodeRef refid="27"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/USManagedVariableObserver/delegate</TokenIdentifier>
-			<Abstract type="html">Accessor to the receiver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfp/USManagedString/stringValue</TokenIdentifier>
+			<Abstract type="html">Accessor to the actual value of the UXM variable.</Abstract>
+			<DeclaredIn>USManagedString.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak, nullable) id&lt;USManagedVariableObserverDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *stringValue</Declaration>
 			
 			
-			<Anchor>//api/name/delegate</Anchor>
+			<Anchor>//api/name/stringValue</Anchor>
             <NodeRef refid="27"/>
 		</Token>
 		

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/USSessionInfo.html">
+	<File path="Classes/USPush.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/USSessionInfo</TokenIdentifier>
-			<Abstract type="html">Information about an Upsight session.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/USPush</TokenIdentifier>
+			<Abstract type="html">USPush class provides the ability to register for remote notifications sent through Apple
+Push Notification Service.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -13,106 +14,102 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/setSessionNumber:</TokenIdentifier>
-			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/registerForPushNotifications</TokenIdentifier>
+			<Abstract type="html">Starts the push notification registration procedure. This method should be called from your
+implementation of App Delegate didFinishLaunchingWithOptions: method. Shortly after this
+call the system should invoke your App Delegate&apos;s application:didRegisterUserNotificationSettings:
+method to pass the settings the user has granted to the application. Your implementation of that
+method must forward the settings to [USPush didRegisterUserNotificationSettings:] to continue
+the registration procedure.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
+			<Declaration>+ (void)registerForPushNotifications</Declaration>
 			
 			
-			<Anchor>//api/name/sessionNumber</Anchor>
+			<Anchor>//api/name/registerForPushNotifications</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/sessionNumber</TokenIdentifier>
-			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/unregisterForPushNotifications</TokenIdentifier>
+			<Abstract type="html">Unregisters the application from receiving remote notifications.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
+			<Declaration>+ (void)unregisterForPushNotifications</Declaration>
 			
 			
-			<Anchor>//api/name/sessionNumber</Anchor>
+			<Anchor>//api/name/unregisterForPushNotifications</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/USSessionInfo/sessionNumber</TokenIdentifier>
-			<Abstract type="html">The incrementing count assigned to the session. If no session has been recorded, defaults to nil.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/registerPushToken:</TokenIdentifier>
+			<Abstract type="html">This method should be called from your implementation of application:didRegisterForRemoteNotificationsWithDeviceToken:
+application delegate method to complete the registration procedure.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, nullable) NSNumber *sessionNumber</Declaration>
-			
-			
-			<Anchor>//api/name/sessionNumber</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/setSessionStartTime:</TokenIdentifier>
-			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
-			
-			
-			<Anchor>//api/name/sessionStartTime</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/USSessionInfo/sessionStartTime</TokenIdentifier>
-			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
-			
-			
-			<Anchor>//api/name/sessionStartTime</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/USSessionInfo/sessionStartTime</TokenIdentifier>
-			<Abstract type="html">The start time of the session in seconds. If No session has been recorded defaults to 0.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) NSTimeInterval sessionStartTime</Declaration>
-			
-			
-			<Anchor>//api/name/sessionStartTime</Anchor>
-            <NodeRef refid="13"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USSessionInfo/setUpsightSessionDelegate:</TokenIdentifier>
-			<Abstract type="html">Sets the delegate class inside the upsight SDK in order to receive information about the session lifecycle.
-You may set the delegate to nil to clear out the delegate.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
-			
-			<Declaration>+ (void)setUpsightSessionDelegate:(nullable NSObject&lt;UpsightSessionDelegate&gt; *)delegate</Declaration>
+			<Declaration>+ (void)registerPushToken:(NSData *)aToken</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>delegate.</Name>
-					<Abstract type="html">An weakly retained delegate object to which the sdk will attempt to report session lifecycle events</Abstract>
+					<Name>aToken</Name>
+					<Abstract type="html">A device token passed by the system to the application delegate.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setUpsightSessionDelegate:</Anchor>
+			<Anchor>//api/name/registerPushToken:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USSessionInfo/getLatestSessionInfo</TokenIdentifier>
-			<Abstract type="html">Gets information about the current Upsight session. Or if no session is active, will return the
-most recent session information. If no session has been recorded, then a default object with
-sessionNumber of nil, and sessionStartTime of 0 will be returned.</Abstract>
-			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/didRegisterUserNotificationSettings:</TokenIdentifier>
+			<Abstract type="html">Call this method from your implementation of application:didRegisterUserNotificationSettings:
+application delegate method to continue the registration procedure after the user confirmed the
+types of notifications that can be received by the app.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
 			
-			<Declaration>+ (nonnull USSessionInfo *)getLatestSessionInfo</Declaration>
+			<Declaration>+ (void)didRegisterUserNotificationSettings:(UIUserNotificationSettings *)aNotificationSettings</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aNotificationSettings</Name>
+					<Abstract type="html">Settings the user has granted to the application.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/didRegisterUserNotificationSettings:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/handleRemoteNotificationWithUserInfo:</TokenIdentifier>
+			<Abstract type="html">Call this method from your implementation of application:didReceiveRemoteNotification:
+application delegate method to let the receiver process a notification.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
+			
+			<Declaration>+ (void)handleRemoteNotificationWithUserInfo:(NSDictionary *)aUserInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUserInfo</Name>
+					<Abstract type="html">A dictionary that contains information related to the remote notification
+that is passed from the system to your application delegate.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/handleRemoteNotificationWithUserInfo:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USPush/pushBillboard</TokenIdentifier>
+			<Abstract type="html">Push notifications sent from Upsight Dashboard can be associated with different content,
+such as announcement, virtual goods promotion, etc. A push billboard is used to present
+contents associated with a push notification when users navigates to your app by tapping on
+the push notification banner.</Abstract>
+			<DeclaredIn>USPush.h</DeclaredIn>
+			
+			<Declaration>+ (id&lt;USBillboard&gt;)pushBillboard</Declaration>
 			
 			
-			<Anchor>//api/name/getLatestSessionInfo</Anchor>
+			<Anchor>//api/name/pushBillboard</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		

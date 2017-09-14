@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/USManagedVariableObserverDelegate.html">
+	<File path="Protocols/USManagedType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/USManagedVariableObserverDelegate</TokenIdentifier>
-			<Abstract type="html">Represents interface of USManagedVariableObserver&apos;s delegate.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/USManagedType</TokenIdentifier>
+			<Abstract type="html">Base interface for objects representing UXM variables, dynamic values controlled from
+the dashboard and propagated to the application when as it runs.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
             
 			
 			<NodeRef refid="28"/>
@@ -13,41 +14,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserverDelegate/observerShouldSynchronizeManagedVariables:</TokenIdentifier>
-			<Abstract type="html">Requests confirmation that pending Managed Variable updates should be applied.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedType/setTag:</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)observerShouldSynchronizeManagedVariables:(nonnull id&lt;USManagedVariableObserver&gt;)anObserver</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>anObserver</Name>
-					<Abstract type="html">An observer that observed the event.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the pending UXM changes should be applied, NO otherwise.</Abstract></ReturnValue>
-			<Anchor>//api/name/observerShouldSynchronizeManagedVariables:</Anchor>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/USManagedVariableObserverDelegate/observer:didSynchronizeManagedVariables:</TokenIdentifier>
-			<Abstract type="html">Notifies the delegate of the end of variables synchronization. At the time this method is
-called, the system has finished variables synchronization which is a good point to access new
-values through USManagedVariable class methods.</Abstract>
-			<DeclaredIn>USManagedVariableObserver.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/USManagedType/tag</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
 			
-			<Declaration>- (void)observer:(nonnull id&lt;USManagedVariableObserver&gt;)anObserver didSynchronizeManagedVariables:(nonnull NSArray *)updatedVariableTags</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>anObserver</Name>
-					<Abstract type="html">An observer that observed the event.</Abstract>
-				</Parameter><Parameter>
-					<Name>updatedVariableTags</Name>
-					<Abstract type="html">Tags of UXM variables that were updated during synchronization.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
 			
-			<Anchor>//api/name/observer:didSynchronizeManagedVariables:</Anchor>
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/USManagedType/tag</TokenIdentifier>
+			<Abstract type="html">Tag is an unique string that is used to identify UXM variables.</Abstract>
+			<DeclaredIn>USManagedType.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
             <NodeRef refid="28"/>
 		</Token>
 		
