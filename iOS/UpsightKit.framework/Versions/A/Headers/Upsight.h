@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "USInAppPurchaseResolution.h"
 #import "UpsightLoggerLevel.h"
+#import "UpsightContentAvailabilityListener.h"
 
 @protocol UpsightDataStoreInterface;
 @protocol USManagedVariableObserver;
@@ -131,6 +132,20 @@ For more details about adding the framework to your application, see the [integr
  @param scope An NSString that uniquely identifies a point of interest in your application.
  */
 + (id<USBillboard>)billboardForScope:(NSString *)scope;
+
+/** Maintains a weak refernce to a content availability listener.
+ Listener recieves a onContentAvailableForScope:withParameters: callback whenever content becomes available for a given scope.
+ Listener recieves a onContentNotAvailableForScope:withParameters: callback when content fails in a scope.
+ Listener recieves partnerInitialized: callback when a partner becomes ready to process content
+ 
+ @param object that conforms to the UpsightContentAvailabilityListener protocol
+ */
++ (void)setContentAvailabilityListener:(id<UpsightContentAvailabilityListener>) listener;
+
+/**
+    Clears the content availability Listener
+ */
++ (void)clearContentAvailabiltyListener;
 
 /** If setLocation is called, the provided location will be attached to all events that are sent until the location is updated, or the application is put in the background for long.
  enough that the current session is considered finished.

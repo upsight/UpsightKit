@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "USBillboard.h"
 
+@class USViewControllerCache;
+
 @protocol USViewController;
+@protocol UpsightContentAvailabilityListener;
 
 @protocol USViewControllerProvider <NSObject>
 
@@ -25,5 +28,8 @@
 @return A billboard with the requested scope.
 */
 - (id<USBillboard>)billboardForScope:(NSString *)aScope;
+- (USViewControllerCache *)controllersCache;
+- (void)setContentAvailabilityListener:(id<UpsightContentAvailabilityListener>) listener;
+- (id<UpsightContentAvailabilityListener>)getContentAvailabilityListener;
 
 @end

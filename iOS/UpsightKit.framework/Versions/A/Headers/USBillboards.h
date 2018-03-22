@@ -8,6 +8,7 @@
 
 #import "USBillboard.h"
 #import "USBillboardError.h"
+#import "UpsightContentAvailabilityListener.h"
 #import "USPurchase.h"
 #import "USReward.h"
 #import "USManagedVariable.h"

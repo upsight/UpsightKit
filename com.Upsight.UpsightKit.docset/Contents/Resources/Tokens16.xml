@@ -268,6 +268,38 @@ allows you to control the display of any content associated with the scope.</Abs
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/setContentAvailabilityListener:</TokenIdentifier>
+			<Abstract type="html">Maintains a weak refernce to a content availability listener.
+Listener recieves a onContentAvailableForScope:withParameters: callback whenever content becomes available for a given scope.
+Listener recieves a onContentNotAvailableForScope:withParameters: callback when content fails in a scope.
+Listener recieves partnerInitialized: callback when a partner becomes ready to process content</Abstract>
+			<DeclaredIn>Upsight.h</DeclaredIn>
+			
+			<Declaration>+ (void)setContentAvailabilityListener:(id&lt;UpsightContentAvailabilityListener&gt;)listener</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">that conforms to the UpsightContentAvailabilityListener protocol</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setContentAvailabilityListener:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/clearContentAvailabiltyListener</TokenIdentifier>
+			<Abstract type="html">    Clears the content availability Listener</Abstract>
+			<DeclaredIn>Upsight.h</DeclaredIn>
+			
+			<Declaration>+ (void)clearContentAvailabiltyListener</Declaration>
+			
+			
+			<Anchor>//api/name/clearContentAvailabiltyListener</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/Upsight/setLocation:</TokenIdentifier>
 			<Abstract type="html">If setLocation is called, the provided location will be attached to all events that are sent until the location is updated, or the application is put in the background for long.
 enough that the current session is considered finished.</Abstract>
