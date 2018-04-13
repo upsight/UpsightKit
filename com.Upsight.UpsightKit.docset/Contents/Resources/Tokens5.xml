@@ -209,53 +209,62 @@ app developer for goods or services.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionStartEventWithPubData:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionStartEventWithPubData:sessionData:</TokenIdentifier>
 			<Abstract type="html">Creates an event indicating that a new session has started.</Abstract>
 			<DeclaredIn>USEventFactory.h</DeclaredIn>
 			
-			<Declaration>+ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)aPubData</Declaration>
+			<Declaration>+ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>aPubData</Name>
 					<Abstract type="html">A dictionary with additional data provided by the publisher.</Abstract>
+				</Parameter><Parameter>
+					<Name>aSessionData</Name>
+					<Abstract type="html">A dictionary containing details about the session.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sessionStartEventWithPubData:</Anchor>
+			<Anchor>//api/name/sessionStartEventWithPubData:sessionData:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionPauseEventWithPubData:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionPauseEventWithPubData:sessionData:</TokenIdentifier>
 			<Abstract type="html">Creates an event that indicates the application has been sent to the background.</Abstract>
 			<DeclaredIn>USEventFactory.h</DeclaredIn>
 			
-			<Declaration>+ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)aPubData</Declaration>
+			<Declaration>+ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>aPubData</Name>
 					<Abstract type="html">A dictionary with additional data provided by the publisher.</Abstract>
+				</Parameter><Parameter>
+					<Name>aSessionData</Name>
+					<Abstract type="html">A dictionary containing details about the session.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sessionPauseEventWithPubData:</Anchor>
+			<Anchor>//api/name/sessionPauseEventWithPubData:sessionData:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionResumeEventWithPubData:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/sessionResumeEventWithPubData:sessionData:</TokenIdentifier>
 			<Abstract type="html">Creates an event indicating that an existing session has been resumed.</Abstract>
 			<DeclaredIn>USEventFactory.h</DeclaredIn>
 			
-			<Declaration>+ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)aPubData</Declaration>
+			<Declaration>+ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>aPubData</Name>
 					<Abstract type="html">A dictionary with additional data provided by the publisher.</Abstract>
+				</Parameter><Parameter>
+					<Name>aSessionData</Name>
+					<Abstract type="html">A dictionary containing details about the session.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sessionResumeEventWithPubData:</Anchor>
+			<Anchor>//api/name/sessionResumeEventWithPubData:sessionData:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

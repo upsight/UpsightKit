@@ -62,7 +62,13 @@
 		
 		<option value="//api/name/clearContentAvailabiltyListener">+ clearContentAvailabiltyListener</option>
 		
+		<option value="//api/name/clearUserID">+ clearUserID</option>
+		
 		<option value="//api/name/defaultLogLevel">+ defaultLogLevel</option>
+		
+		<option value="//api/name/deleteUser:">+ deleteUser:</option>
+		
+		<option value="//api/name/getCurrentUserID">+ getCurrentUserID</option>
 		
 		<option value="//api/name/optOutStatus">+ optOutStatus</option>
 		
@@ -84,6 +90,8 @@
 		
 		<option value="//api/name/recordMonetizationEventWithResolution:totalPrice:currency:product:properties:">+ recordMonetizationEventWithResolution:totalPrice:currency:product:properties:</option>
 		
+		<option value="//api/name/resetUserAttributes">+ resetUserAttributes</option>
+		
 		<option value="//api/name/senderID">+ senderID</option>
 		
 		<option value="//api/name/setContentAvailabilityListener:">+ setContentAvailabilityListener:</option>
@@ -93,6 +101,8 @@
 		<option value="//api/name/setLocation:">+ setLocation:</option>
 		
 		<option value="//api/name/setOptOutStatus:">+ setOptOutStatus:</option>
+		
+		<option value="//api/name/setUserID:preserve:">+ setUserID:preserve:</option>
 		
 		<option value="//api/name/token">+ token</option>
 		
@@ -1268,6 +1278,258 @@ It is recommended that you begin your integration with <code>UpsightLoggerLevelD
 </div>
 						</div>
 						
+
+						<a title="USUserSession Methods" name="task_USUserSession Methods"></a>
+						<h2 class="task-title">USUserSession Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setUserID:preserve:" title="setUserID:preserve:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUserID:preserve:">+&nbsp;setUserID:preserve:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the specified User ID. This has several effects:
+- Ends the session for any current user
+- Creates a new user if needed (see retainAttributes flag)
+- Begins a new Session
+- Once a User ID is set, it is retained through application starts.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSError *)setUserID:(nonnull NSString *)<em>aUserID</em> preserve:(BOOL)<em>retainAttributes</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUserID</code></th>
+						<td><p>A new value for the user attribute indicated by aUserID.  It is highly recommended to hash the userID to prevent sending private and indientifiable information. The string must be a maximum of 256 bytes in size.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>retainAttributes</code></th>
+						<td><p>a flag to determine if the user attributes from an anonymous user session should be copied into a new user. If transitioning to or from an existing user, this flag is ignored.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clearUserID" title="clearUserID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearUserID">+&nbsp;clearUserID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Resets the current user to nil (anonymous user)
+Ends the current session if a User ID is currently set.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSError *)clearUserID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteUser:" title="deleteUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteUser:">+&nbsp;deleteUser:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes a user from the device, deleting all the attributes and session information associated with it. It will also set the current user to nil (anonymous user). This cannot be undone.  The anonymous user cannot be deleted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSError *)deleteUser:(nonnull NSString *)<em>aUserID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aUserID</code></th>
+						<td><p>A new value for the user attribute indicated by aUserID.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetUserAttributes" title="resetUserAttributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetUserAttributes">+&nbsp;resetUserAttributes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Resets the User attributes of the current user to the default values found in the app Info.plist file</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)resetUserAttributes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurrentUserID" title="getCurrentUserID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurrentUserID">+&nbsp;getCurrentUserID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fetches the current user ID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSString *)getCurrentUserID</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Value of the current user ID, nil if not no current user (anonymous user)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -1280,7 +1542,7 @@ It is recommended that you begin your integration with <code>UpsightLoggerLevelD
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-02-08</p>
+						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-04-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -116,6 +116,20 @@ sessionNumber of nil, and sessionStartTime of 0 will be returned.</Abstract>
             <NodeRef refid="14"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USSessionInfo/getLatestUserSessionInfo</TokenIdentifier>
+			<Abstract type="html">Gets information about the current Upsight user session. Or if no user session is active, will return the
+most recent session information. If no session has been recorded, then a default object with
+sessionNumber of nil, and sessionStartTime of 0 will be returned.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull USSessionInfo *)getLatestUserSessionInfo</Declaration>
+			
+			
+			<Anchor>//api/name/getLatestUserSessionInfo</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
         
         
 	</File>

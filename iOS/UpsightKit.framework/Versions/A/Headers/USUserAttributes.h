@@ -113,5 +113,6 @@ defined in the application plist file, unless you changed the values with <[USUs
 dictionary contains actual values, reflecting the changes made through the setters exposed
 by the class.*/
 + (NSDictionary *)dictionaryRepresentation;
++ (NSDictionary *)dictionaryRepresentationForUser:(NSString *) userID;
 
 @end

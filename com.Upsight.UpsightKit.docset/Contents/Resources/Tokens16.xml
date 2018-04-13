@@ -402,6 +402,84 @@ It is recommended that you begin your integration with UpsightLoggerLevelDebug u
             <NodeRef refid="16"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/setUserID:preserve:</TokenIdentifier>
+			<Abstract type="html">Sets the specified User ID. This has several effects:
+- Ends the session for any current user
+- Creates a new user if needed (see retainAttributes flag)
+- Begins a new Session
+- Once a User ID is set, it is retained through application starts.</Abstract>
+			<DeclaredIn>USUserSession.h</DeclaredIn>
+			
+			<Declaration>+ (nullable NSError *)setUserID:(nonnull NSString *)aUserID preserve:(BOOL)retainAttributes</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUserID</Name>
+					<Abstract type="html">A new value for the user attribute indicated by aUserID.  It is highly recommended to hash the userID to prevent sending private and indientifiable information. The string must be a maximum of 256 bytes in size.</Abstract>
+				</Parameter><Parameter>
+					<Name>retainAttributes</Name>
+					<Abstract type="html">a flag to determine if the user attributes from an anonymous user session should be copied into a new user. If transitioning to or from an existing user, this flag is ignored.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setUserID:preserve:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/clearUserID</TokenIdentifier>
+			<Abstract type="html">Resets the current user to nil (anonymous user)
+Ends the current session if a User ID is currently set.</Abstract>
+			<DeclaredIn>USUserSession.h</DeclaredIn>
+			
+			<Declaration>+ (nullable NSError *)clearUserID</Declaration>
+			
+			
+			<Anchor>//api/name/clearUserID</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/deleteUser:</TokenIdentifier>
+			<Abstract type="html">Removes a user from the device, deleting all the attributes and session information associated with it. It will also set the current user to nil (anonymous user). This cannot be undone.  The anonymous user cannot be deleted.</Abstract>
+			<DeclaredIn>USUserSession.h</DeclaredIn>
+			
+			<Declaration>+ (nullable NSError *)deleteUser:(nonnull NSString *)aUserID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aUserID</Name>
+					<Abstract type="html">A new value for the user attribute indicated by aUserID.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteUser:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/resetUserAttributes</TokenIdentifier>
+			<Abstract type="html">Resets the User attributes of the current user to the default values found in the app Info.plist file</Abstract>
+			<DeclaredIn>USUserSession.h</DeclaredIn>
+			
+			<Declaration>+ (void)resetUserAttributes</Declaration>
+			
+			
+			<Anchor>//api/name/resetUserAttributes</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/Upsight/getCurrentUserID</TokenIdentifier>
+			<Abstract type="html">Fetches the current user ID.</Abstract>
+			<DeclaredIn>USUserSession.h</DeclaredIn>
+			
+			<Declaration>+ (nullable NSString *)getCurrentUserID</Declaration>
+			
+			<ReturnValue><Abstract type="html">Value of the current user ID, nil if not no current user (anonymous user)</Abstract></ReturnValue>
+			<Anchor>//api/name/getCurrentUserID</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
         
         
 	</File>

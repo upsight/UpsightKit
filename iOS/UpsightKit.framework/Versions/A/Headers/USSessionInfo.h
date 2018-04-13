@@ -60,6 +60,42 @@
  */
 - (void)upsightSessionDidResume;
 
+/**
+ * Called when a new user session is about to start. It is guaranteed to run before any event is
+ * recorded, so this gives an opportunity for the application to set initial event attributes.
+ * <p/>
+ * This block is executed synchronously and should be fast-returning.
+ * @param previousSessionInfo Information about the previous Upsight session. If there is no
+ *                            previous session, a nil sessionNumber is sent.
+ */
+- (void)upsightUserSessionWillStart:(nonnull USSessionInfo *) previousSessionInfo;
+
+/**
+ * Called when a new user session is created. And current session Info is now available
+ * <p/>
+ * This block is executed synchronously and should be fast-returning.
+ */
+- (void)upsightUserSessionDidStart;
+
+/**
+ * Called when an existing user session is about to be extended. It is guaranteed to run before any
+ * event is recorded in this extended part of the session, so this gives an opportunity for the
+ * application to set initial event attributes.
+ * <p/>
+ * This block is executed synchronously and should be fast-returning.
+ *
+ * @param resumedSessionInfo Information about the extended Upsight session.
+ */
+- (void)upsightUserSessionWillResume:(nonnull USSessionInfo *) resumedSessionInfo;
+
+/**
+ * Called when an existing user session is extended.
+ * <p/>
+ * This block is executed synchronously and should be fast-returning.
+ *
+ */
+- (void)upsightUserSessionDidResume;
+
 @end
 
 /**
@@ -94,6 +130,14 @@
  *
  */
 + (nonnull USSessionInfo *)getLatestSessionInfo;
+
+/**
+ * Gets information about the current Upsight user session. Or if no user session is active, will return the
+ * most recent session information. If no session has been recorded, then a default object with
+ * sessionNumber of nil, and sessionStartTime of 0 will be returned.
+ *
+ */
++ (nonnull USSessionInfo *)getLatestUserSessionInfo;
 
 @end
 

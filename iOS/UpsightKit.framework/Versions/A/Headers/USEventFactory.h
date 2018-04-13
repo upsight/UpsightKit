@@ -132,8 +132,9 @@ When the application is launched as a result of an incoming push notification, i
 followed with a new session start.
 
 @param aPubData A dictionary with additional data provided by the publisher.
+@param aSessionData A dictionary containing details about the session.
 */
-+ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)aPubData;
++ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData;
 
 /** Creates an event that indicates the application has been sent to the background.
 
@@ -150,8 +151,9 @@ When the application is launched as a result of an incoming push notification, i
 followed with a new session start.
 
 @param aPubData A dictionary with additional data provided by the publisher.
+@param aSessionData A dictionary containing details about the session.
 */
-+ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)aPubData;
++ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData;
 
 /** Creates an event indicating that an existing session has been resumed.
 
@@ -168,8 +170,9 @@ When the application is launched as a result of an incoming push notification, i
 followed with a new session start.
 
 @param aPubData A dictionary with additional data provided by the publisher.
+@param aSessionData A dictionary containing details about the session.
 */
-+ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)aPubData;
++ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)aPubData sessionData:(NSDictionary *)aSessionData;
 
 #if !TARGET_OS_TV
 

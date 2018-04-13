@@ -68,6 +68,14 @@
 		
 		<option value="//api/name/upsightSessionWillStart:">- upsightSessionWillStart:</option>
 		
+		<option value="//api/name/upsightUserSessionDidResume">- upsightUserSessionDidResume</option>
+		
+		<option value="//api/name/upsightUserSessionDidStart">- upsightUserSessionDidStart</option>
+		
+		<option value="//api/name/upsightUserSessionWillResume:">- upsightUserSessionWillResume:</option>
+		
+		<option value="//api/name/upsightUserSessionWillStart:">- upsightUserSessionWillStart:</option>
+		
 	</optgroup>
 	
 	
@@ -325,6 +333,210 @@ This block is executed synchronously and should be fast-returning.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/upsightUserSessionWillStart:" title="upsightUserSessionWillStart:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upsightUserSessionWillStart:">&ndash;&nbsp;upsightUserSessionWillStart:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when a new user session is about to start. It is guaranteed to run before any event is
+recorded, so this gives an opportunity for the application to set initial event attributes.</p>
+
+<p><p/>
+This block is executed synchronously and should be fast-returning.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)upsightUserSessionWillStart:(nonnull USSessionInfo *)<em>previousSessionInfo</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>previousSessionInfo</code></th>
+						<td><p>Information about the previous <a href="../Classes/Upsight.html">Upsight</a> session. If there is no
+previous session, a nil sessionNumber is sent.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/upsightUserSessionDidStart" title="upsightUserSessionDidStart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upsightUserSessionDidStart">&ndash;&nbsp;upsightUserSessionDidStart</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when a new user session is created. And current session Info is now available</p>
+
+<p><p/>
+This block is executed synchronously and should be fast-returning.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)upsightUserSessionDidStart</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/upsightUserSessionWillResume:" title="upsightUserSessionWillResume:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upsightUserSessionWillResume:">&ndash;&nbsp;upsightUserSessionWillResume:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an existing user session is about to be extended. It is guaranteed to run before any
+event is recorded in this extended part of the session, so this gives an opportunity for the
+application to set initial event attributes.</p>
+
+<p><p/>
+This block is executed synchronously and should be fast-returning.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)upsightUserSessionWillResume:(nonnull USSessionInfo *)<em>resumedSessionInfo</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>resumedSessionInfo</code></th>
+						<td><p>Information about the extended <a href="../Classes/Upsight.html">Upsight</a> session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/upsightUserSessionDidResume" title="upsightUserSessionDidResume"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upsightUserSessionDidResume">&ndash;&nbsp;upsightUserSessionDidResume</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an existing user session is extended.</p>
+
+<p><p/>
+This block is executed synchronously and should be fast-returning.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)upsightUserSessionDidResume</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USSessionInfo.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -340,7 +552,7 @@ This block is executed synchronously and should be fast-returning.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-02-08</p>
+						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-04-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

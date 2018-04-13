@@ -14,6 +14,7 @@
 #import "USServiceManager.h"
 #import "USBillboards.h"
 #import "USSessionInfo.h"
+#import "USUserSession.h"
 
 #if !TARGET_OS_TV
 #import "USPush.h"

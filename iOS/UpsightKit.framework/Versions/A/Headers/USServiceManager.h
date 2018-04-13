@@ -13,6 +13,7 @@
 @protocol USBillboardManager;
 @protocol USActionMapManagerInterface;
 @class USInstallationTracker;
+@class USUserInstallation;
 @class USPushData;
 
 @interface USServiceManager : NSObject
@@ -23,6 +24,7 @@
 + (id<USActionMapManagerInterface>)actionMapManagerForStore:(id<UpsightDataStoreInterface>)datastore;
 
 + (USInstallationTracker *)installationTracker;
++ (USUserInstallation *)userInstallationTracker;
 
 
 @property (nonatomic, strong) USPushData * storedPushData;

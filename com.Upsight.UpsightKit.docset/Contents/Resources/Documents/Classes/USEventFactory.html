@@ -84,11 +84,11 @@
 		
 		<option value="//api/name/pushUnregistrationEventWithPubData:">+ pushUnregistrationEventWithPubData:</option>
 		
-		<option value="//api/name/sessionPauseEventWithPubData:">+ sessionPauseEventWithPubData:</option>
+		<option value="//api/name/sessionPauseEventWithPubData:sessionData:">+ sessionPauseEventWithPubData:sessionData:</option>
 		
-		<option value="//api/name/sessionResumeEventWithPubData:">+ sessionResumeEventWithPubData:</option>
+		<option value="//api/name/sessionResumeEventWithPubData:sessionData:">+ sessionResumeEventWithPubData:sessionData:</option>
 		
-		<option value="//api/name/sessionStartEventWithPubData:">+ sessionStartEventWithPubData:</option>
+		<option value="//api/name/sessionStartEventWithPubData:sessionData:">+ sessionStartEventWithPubData:sessionData:</option>
 		
 		<option value="//api/name/unrenderedContentEventWithContentID:campaignID:scope:pubData:">+ unrenderedContentEventWithContentID:campaignID:scope:pubData:</option>
 		
@@ -683,8 +683,8 @@ app developer for goods or services.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sessionStartEventWithPubData:" title="sessionStartEventWithPubData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionStartEventWithPubData:">+&nbsp;sessionStartEventWithPubData:</a></code>
+	<a name="//api/name/sessionStartEventWithPubData:sessionData:" title="sessionStartEventWithPubData:sessionData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionStartEventWithPubData:sessionData:">+&nbsp;sessionStartEventWithPubData:sessionData:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -699,7 +699,7 @@ app developer for goods or services.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)<em>aPubData</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (USSessionStartEvent *)sessionStartEventWithPubData:(NSDictionary *)<em>aPubData</em> sessionData:(NSDictionary *)<em>aSessionData</em></code></div>
 
 		    
 			
@@ -710,6 +710,11 @@ app developer for goods or services.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>aPubData</code></th>
 						<td><p>A dictionary with additional data provided by the publisher.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSessionData</code></th>
+						<td><p>A dictionary containing details about the session.</p></td>
 					</tr>
 				
 				</table>
@@ -751,8 +756,8 @@ followed with a new session start.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sessionPauseEventWithPubData:" title="sessionPauseEventWithPubData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionPauseEventWithPubData:">+&nbsp;sessionPauseEventWithPubData:</a></code>
+	<a name="//api/name/sessionPauseEventWithPubData:sessionData:" title="sessionPauseEventWithPubData:sessionData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionPauseEventWithPubData:sessionData:">+&nbsp;sessionPauseEventWithPubData:sessionData:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -767,7 +772,7 @@ followed with a new session start.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)<em>aPubData</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (USSessionPauseEvent *)sessionPauseEventWithPubData:(NSDictionary *)<em>aPubData</em> sessionData:(NSDictionary *)<em>aSessionData</em></code></div>
 
 		    
 			
@@ -778,6 +783,11 @@ followed with a new session start.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>aPubData</code></th>
 						<td><p>A dictionary with additional data provided by the publisher.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSessionData</code></th>
+						<td><p>A dictionary containing details about the session.</p></td>
 					</tr>
 				
 				</table>
@@ -819,8 +829,8 @@ followed with a new session start.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sessionResumeEventWithPubData:" title="sessionResumeEventWithPubData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sessionResumeEventWithPubData:">+&nbsp;sessionResumeEventWithPubData:</a></code>
+	<a name="//api/name/sessionResumeEventWithPubData:sessionData:" title="sessionResumeEventWithPubData:sessionData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionResumeEventWithPubData:sessionData:">+&nbsp;sessionResumeEventWithPubData:sessionData:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -835,7 +845,7 @@ followed with a new session start.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)<em>aPubData</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (USSessionResumeEvent *)sessionResumeEventWithPubData:(NSDictionary *)<em>aPubData</em> sessionData:(NSDictionary *)<em>aSessionData</em></code></div>
 
 		    
 			
@@ -846,6 +856,11 @@ followed with a new session start.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>aPubData</code></th>
 						<td><p>A dictionary with additional data provided by the publisher.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aSessionData</code></th>
+						<td><p>A dictionary containing details about the session.</p></td>
 					</tr>
 				
 				</table>
@@ -1202,7 +1217,7 @@ from <a href="../Classes/Upsight.html">Upsight</a> server.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-02-08</p>
+						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-04-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

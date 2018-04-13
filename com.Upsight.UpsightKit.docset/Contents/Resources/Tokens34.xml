@@ -83,6 +83,76 @@ This block is executed synchronously and should be fast-returning.</Abstract>
             <NodeRef refid="34"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightUserSessionWillStart:</TokenIdentifier>
+			<Abstract type="html">Called when a new user session is about to start. It is guaranteed to run before any event is
+recorded, so this gives an opportunity for the application to set initial event attributes.
+&lt;p/&gt;
+This block is executed synchronously and should be fast-returning.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>- (void)upsightUserSessionWillStart:(nonnull USSessionInfo *)previousSessionInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>previousSessionInfo</Name>
+					<Abstract type="html">Information about the previous Upsight session. If there is no
+previous session, a nil sessionNumber is sent.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/upsightUserSessionWillStart:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightUserSessionDidStart</TokenIdentifier>
+			<Abstract type="html">Called when a new user session is created. And current session Info is now available
+&lt;p/&gt;
+This block is executed synchronously and should be fast-returning.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>- (void)upsightUserSessionDidStart</Declaration>
+			
+			
+			<Anchor>//api/name/upsightUserSessionDidStart</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightUserSessionWillResume:</TokenIdentifier>
+			<Abstract type="html">Called when an existing user session is about to be extended. It is guaranteed to run before any
+event is recorded in this extended part of the session, so this gives an opportunity for the
+application to set initial event attributes.
+&lt;p/&gt;
+This block is executed synchronously and should be fast-returning.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>- (void)upsightUserSessionWillResume:(nonnull USSessionInfo *)resumedSessionInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>resumedSessionInfo</Name>
+					<Abstract type="html">Information about the extended Upsight session.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/upsightUserSessionWillResume:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UpsightSessionDelegate/upsightUserSessionDidResume</TokenIdentifier>
+			<Abstract type="html">Called when an existing user session is extended.
+&lt;p/&gt;
+This block is executed synchronously and should be fast-returning.</Abstract>
+			<DeclaredIn>USSessionInfo.h</DeclaredIn>
+			
+			<Declaration>- (void)upsightUserSessionDidResume</Declaration>
+			
+			
+			<Anchor>//api/name/upsightUserSessionDidResume</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
         
         
 	</File>
