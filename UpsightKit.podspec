@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "UpsightKit"
-  s.version      = "4.8.1"
-  s.summary      = "Upsight SDK for iOS and tvOS."
+  s.version      = "4.9.0"
+  s.summary      = "Upsight SDK for iOS"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platforms = { :ios => "7.0", :tvos => "9.1" }
+  s.platforms = { :ios => "8.0", :tvos => "9.1" }
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

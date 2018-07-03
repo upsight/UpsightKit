@@ -70,6 +70,7 @@
 						<NodeRef refid="38"/>
 						<NodeRef refid="39"/>
 						<NodeRef refid="40"/>
+						<NodeRef refid="41"/>
 						
 					</Subnodes>
 				</Node>
@@ -79,8 +80,8 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="41"/>
                         <NodeRef refid="42"/>
+                        <NodeRef refid="43"/>
                         
                     </Subnodes>
                 </Node>
@@ -1068,42 +1069,47 @@
         </Node>
 		
         <Node id="35" type="file" documentType="reference">
+            <Name>EnhancedPrivacyApplicibiltyLevel</Name>
+            <Path>Constants/EnhancedPrivacyApplicibiltyLevel.html</Path>
+            
+        </Node>
+		<Node id="36" type="file" documentType="reference">
             <Name>USBillboardError</Name>
             <Path>Constants/USBillboardError.html</Path>
             
         </Node>
-		<Node id="36" type="file" documentType="reference">
+		<Node id="37" type="file" documentType="reference">
             <Name>USPurchaseResolution</Name>
             <Path>Constants/USPurchaseResolution.html</Path>
             
         </Node>
-		<Node id="37" type="file" documentType="reference">
+		<Node id="38" type="file" documentType="reference">
             <Name>USUserSessionErrorCodes</Name>
             <Path>Constants/USUserSessionErrorCodes.html</Path>
             
         </Node>
-		<Node id="38" type="file" documentType="reference">
+		<Node id="39" type="file" documentType="reference">
             <Name>UpsightError</Name>
             <Path>Constants/UpsightError.html</Path>
             
         </Node>
-		<Node id="39" type="file" documentType="reference">
+		<Node id="40" type="file" documentType="reference">
             <Name>UpsightLoggerLevel</Name>
             <Path>Constants/UpsightLoggerLevel.html</Path>
             
         </Node>
-		<Node id="40" type="file" documentType="reference">
+		<Node id="41" type="file" documentType="reference">
             <Name>UpsightObservableAction</Name>
             <Path>Constants/UpsightObservableAction.html</Path>
             
         </Node>
 		
-        <Node id="41" type="file" documentType="reference">
+        <Node id="42" type="file" documentType="reference">
             <Name>UpsightDataStoreCompletion</Name>
             <Path>Blocks/UpsightDataStoreCompletion.html</Path>
             
         </Node>
-        <Node id="42" type="file" documentType="reference">
+        <Node id="43" type="file" documentType="reference">
             <Name>UpsightDataStoreObjectsCompletion</Name>
             <Path>Blocks/UpsightDataStoreObjectsCompletion.html</Path>
             

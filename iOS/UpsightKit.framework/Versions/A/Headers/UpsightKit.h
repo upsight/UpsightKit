@@ -15,6 +15,8 @@
 #import "USBillboards.h"
 #import "USSessionInfo.h"
 #import "USUserSession.h"
+#import "USUserSession.h"
+#import "USEnhancedPrivacy.h"
 
 #if !TARGET_OS_TV
 #import "USPush.h"

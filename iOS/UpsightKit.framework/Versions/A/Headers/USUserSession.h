@@ -51,6 +51,35 @@ typedef NS_ENUM(NSUInteger, USUserSessionErrorCodes) {
  */
 + (nullable NSString*)getCurrentUserID;
 
+/** allows you to specify any 3-character country code to set as the user's home country. If you would like to clear this value, simply pass nil.
+ @param aCountryName A 3 character code indicating the country. Country code will be validated by the API.
+ 
+ @retval bool indicating whether the home country was successfully set
+ */
++ (BOOL)setHomeCountry:(nullable NSString *) aCountryName;
+
+/** returns the set home country string of the user or nil if none was set.
+
+@retval 3 character string of the country that is set, or nil if no value is set.
+*/
++ (nullable NSString *)getHomeCountry;
+
+/** allows you to specify any 3-character country code to set as the user's current country. If you would like to clear this value, simply pass nil.
+ 
+@param aCountryName A 3 character code indicating the country. Country code will be validated by the API .
+ 
+@retval bool indicating whether the current country was successfully set
+*/
++ (BOOL)setCurrentCountry:(nullable NSString *) aCountryName;
+
+/**  returns the set current country string of the user or nil if none was set.
+ 
+@retval 3 character string of the country that is set, or nil if no value is set.
+*/
++ (nullable NSString *)getCurrentCountry;
+
+ 
+
 
 
 @end

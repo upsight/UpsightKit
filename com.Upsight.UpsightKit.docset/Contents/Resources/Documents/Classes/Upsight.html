@@ -68,7 +68,15 @@
 		
 		<option value="//api/name/deleteUser:">+ deleteUser:</option>
 		
+		<option value="//api/name/getCurrentCountry">+ getCurrentCountry</option>
+		
 		<option value="//api/name/getCurrentUserID">+ getCurrentUserID</option>
+		
+		<option value="//api/name/getEnhancedPrivacyApplicability">+ getEnhancedPrivacyApplicability</option>
+		
+		<option value="//api/name/getHomeCountry">+ getHomeCountry</option>
+		
+		<option value="//api/name/isEnhancedPrivacyConsentGranted">+ isEnhancedPrivacyConsentGranted</option>
 		
 		<option value="//api/name/optOutStatus">+ optOutStatus</option>
 		
@@ -96,7 +104,15 @@
 		
 		<option value="//api/name/setContentAvailabilityListener:">+ setContentAvailabilityListener:</option>
 		
+		<option value="//api/name/setCurrentCountry:">+ setCurrentCountry:</option>
+		
 		<option value="//api/name/setDefaultLogLevel:">+ setDefaultLogLevel:</option>
+		
+		<option value="//api/name/setEnhancedPrivacyApplicability:">+ setEnhancedPrivacyApplicability:</option>
+		
+		<option value="//api/name/setEnhancedPrivacyConsentGranted:">+ setEnhancedPrivacyConsentGranted:</option>
+		
+		<option value="//api/name/setHomeCountry:">+ setHomeCountry:</option>
 		
 		<option value="//api/name/setLocation:">+ setLocation:</option>
 		
@@ -1279,6 +1295,208 @@ It is recommended that you begin your integration with <code>UpsightLoggerLevelD
 						</div>
 						
 
+						<a title="EnhancedPrivacy Methods" name="task_EnhancedPrivacy Methods"></a>
+						<h2 class="task-title">EnhancedPrivacy Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setEnhancedPrivacyApplicability:" title="setEnhancedPrivacyApplicability:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setEnhancedPrivacyApplicability:">+&nbsp;setEnhancedPrivacyApplicability:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the enhanced privacy applicibility Level to the corresponding value which helps determine how to handle user data. see @<a href="../Constants/EnhancedPrivacyApplicibiltyLevel.html">EnhancedPrivacyApplicibiltyLevel</a> above</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setEnhancedPrivacyApplicability:(NSInteger)<em>privacyLevel</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>privacyLevel</code></th>
+						<td><p>Integter value corresponding to the above enums, values outside of the defined values will no-op</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USEnhancedPrivacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getEnhancedPrivacyApplicability" title="getEnhancedPrivacyApplicability"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getEnhancedPrivacyApplicability">+&nbsp;getEnhancedPrivacyApplicability</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get shte current enhanced privacy applicibility level.
+@retval the Current level that the SDK has and is sending to the API. See @<a href="../Constants/EnhancedPrivacyApplicibiltyLevel.html">EnhancedPrivacyApplicibiltyLevel</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSInteger)getEnhancedPrivacyApplicability</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USEnhancedPrivacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setEnhancedPrivacyConsentGranted:" title="setEnhancedPrivacyConsentGranted:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setEnhancedPrivacyConsentGranted:">+&nbsp;setEnhancedPrivacyConsentGranted:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  allows you to indicate to Upsight whether or not a user has consented for additional data collection. This should be changed at any time a user either consents or revokes consent. Your application is responsible for requesting and properly passing in the current consent status to the Upsight SDK. By default this is set to false.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setEnhancedPrivacyConsentGranted:(BOOL)<em>consentGranted</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>consentGranted</code></th>
+						<td><p>A flag to indicate whether the user has consent to data collection. True for Consent granted, false for consent revoked or denied.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USEnhancedPrivacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isEnhancedPrivacyConsentGranted" title="isEnhancedPrivacyConsentGranted"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEnhancedPrivacyConsentGranted">+&nbsp;isEnhancedPrivacyConsentGranted</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns the current status of whether or not a user has given consent.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isEnhancedPrivacyConsentGranted</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@retval (bool) current status of Consent Granted</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USEnhancedPrivacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="USUserSession Methods" name="task_USUserSession Methods"></a>
 						<h2 class="task-title">USUserSession Methods</h2>
 
@@ -1527,6 +1745,208 @@ Ends the current session if a User ID is currently set.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/setHomeCountry:" title="setHomeCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setHomeCountry:">+&nbsp;setHomeCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>allows you to specify any 3-character country code to set as the user&rsquo;s home country. If you would like to clear this value, simply pass nil.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)setHomeCountry:(nullable NSString *)<em>aCountryName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCountryName</code></th>
+						<td><p>A 3 character code indicating the country. Country code will be validated by the API.</p>
+
+<p>@retval bool indicating whether the home country was successfully set</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getHomeCountry" title="getHomeCountry"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getHomeCountry">+&nbsp;getHomeCountry</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>returns the set home country string of the user or nil if none was set.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSString *)getHomeCountry</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@retval 3 character string of the country that is set, or nil if no value is set.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCurrentCountry:" title="setCurrentCountry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCurrentCountry:">+&nbsp;setCurrentCountry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>allows you to specify any 3-character country code to set as the user&rsquo;s current country. If you would like to clear this value, simply pass nil.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)setCurrentCountry:(nullable NSString *)<em>aCountryName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aCountryName</code></th>
+						<td><p>A 3 character code indicating the country. Country code will be validated by the API .</p>
+
+<p>@retval bool indicating whether the current country was successfully set</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getCurrentCountry" title="getCurrentCountry"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCurrentCountry">+&nbsp;getCurrentCountry</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  returns the set current country string of the user or nil if none was set.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable NSString *)getCurrentCountry</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@retval 3 character string of the country that is set, or nil if no value is set.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">USUserSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1542,7 +1962,7 @@ Ends the current session if a User ID is currently set.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-05-01</p>
+						<p class="copyright">Copyright &copy; 2018 Upsight. All rights reserved. Updated: 2018-06-18</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

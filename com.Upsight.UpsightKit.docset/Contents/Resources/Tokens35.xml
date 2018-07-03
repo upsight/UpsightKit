@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/USBillboardError.html">
+	<File path="Constants/EnhancedPrivacyApplicibiltyLevel.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/USBillboardError</TokenIdentifier>
-			<Abstract type="html">Error codes indicating specific errors from USBillboards library.</Abstract>
-			<DeclaredIn>USBillboardError.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/EnhancedPrivacyApplicibiltyLevel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>USEnhancedPrivacy.h</DeclaredIn>
             
 			
 			<NodeRef refid="35"/>
@@ -14,41 +14,31 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/USBillboardErrorLoadContext</TokenIdentifier>
-            <Abstract type="html">Indicates that the SDK is not able to pass context to a content unit web view.</Abstract>
-            <Declaration>USBillboardErrorLoadContext</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/kEnhancedPrivacyApplicibility_Auto</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>kEnhancedPrivacyApplicibility_Auto</Declaration>
             
-            <DeclaredIn>USBillboardError.h</DeclaredIn>
+            <DeclaredIn>USEnhancedPrivacy.h</DeclaredIn>
             
             <NodeRef refid="35"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/USBillboardErrorLoadResponse</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>USBillboardErrorLoadResponse</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/kEnhancedPrivacyApplicibility_YES</TokenIdentifier>
+            <Abstract type="html">(Default) Upsight&apos;s servers will determine whether or not a user applies for enhanced privacy (eg they are in a country that must comply to GDPR). With this on, certain Upsight features, such as mediation, may not be available for users in areas where enhanced privacy applies.</Abstract>
+            <Declaration>kEnhancedPrivacyApplicibility_YES</Declaration>
             
-            <DeclaredIn>USBillboardError.h</DeclaredIn>
-            
-            <NodeRef refid="35"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/USBillboardErrorLoadAction</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>USBillboardErrorLoadAction</Declaration>
-            
-            <DeclaredIn>USBillboardError.h</DeclaredIn>
+            <DeclaredIn>USEnhancedPrivacy.h</DeclaredIn>
             
             <NodeRef refid="35"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/USBillboardErrorLoadTimeout</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>USBillboardErrorLoadTimeout</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/kEnhancedPrivacyApplicibility_NO</TokenIdentifier>
+            <Abstract type="html">Enhanced privacy applies to this user.</Abstract>
+            <Declaration>kEnhancedPrivacyApplicibility_NO</Declaration>
             
-            <DeclaredIn>USBillboardError.h</DeclaredIn>
+            <DeclaredIn>USEnhancedPrivacy.h</DeclaredIn>
             
             <NodeRef refid="35"/>
         </Token>
