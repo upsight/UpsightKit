@@ -8,6 +8,7 @@
 
 #ifndef USEnhancedPrivacy_h
 #define USEnhancedPrivacy_h
+#import "Upsight.h"
 
 typedef NS_ENUM(NSInteger, EnhancedPrivacyApplicibiltyLevel) {
     kEnhancedPrivacyApplicibility_Auto, ///(Default) Upsight's servers will determine whether or not a user applies for enhanced privacy (eg they are in a country that must comply to GDPR). With this on, certain Upsight features, such as mediation, may not be available for users in areas where enhanced privacy applies.
@@ -19,11 +20,10 @@ typedef NS_ENUM(NSInteger, EnhancedPrivacyApplicibiltyLevel) {
 
 /** Sets the enhanced privacy applicibility Level to the corresponding value which helps determine how to handle user data. see @EnhancedPrivacyApplicibiltyLevel above
  @param privacyLevel Integter value corresponding to the above enums, values outside of the defined values will no-op
- 
  */
 + (void)setEnhancedPrivacyApplicability:(NSInteger) privacyLevel;
 
-/** Get shte current enhanced privacy applicibility level.
+/** Gets the current enhanced privacy applicibility level.
  @retval the Current level that the SDK has and is sending to the API. See @EnhancedPrivacyApplicibiltyLevel
  */
 + (NSInteger)getEnhancedPrivacyApplicability;
@@ -35,7 +35,6 @@ typedef NS_ENUM(NSInteger, EnhancedPrivacyApplicibiltyLevel) {
 + (void)setEnhancedPrivacyConsentGranted:(BOOL) consentGranted;
 
 /** returns the current status of whether or not a user has given consent.
- 
  @retval (bool) current status of Consent Granted
  */
 + (BOOL)isEnhancedPrivacyConsentGranted;

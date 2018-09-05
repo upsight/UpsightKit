@@ -34,6 +34,29 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/analyticsEventWithName:value:pubData:</TokenIdentifier>
+			<Abstract type="html">Creates an analytics event with the given name. You can provide any additional data you&apos;d like to send as a dictionary of key-&gt;value pairs.</Abstract>
+			<DeclaredIn>USEventFactory.h</DeclaredIn>
+			
+			<Declaration>+ (USAnalyticsEvent *)analyticsEventWithName:(NSString *)aName value:(NSNumber *)aValue pubData:(NSDictionary *)aPubData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aName</Name>
+					<Abstract type="html">A publisher-defined string representing the event name.</Abstract>
+				</Parameter><Parameter>
+					<Name>aValue</Name>
+					<Abstract type="html">A Publisher-defined Number representing the generic value tied to the Event</Abstract>
+				</Parameter><Parameter>
+					<Name>aPubData</Name>
+					<Abstract type="html">A dictionary with additional data provided by the publisher.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/analyticsEventWithName:value:pubData:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/USEventFactory/dataCollectionEventWitDataBundle:streamID:pubData:</TokenIdentifier>
 			<Abstract type="html">Creates an event containing data collected from the user.</Abstract>
 			<DeclaredIn>USEventFactory.h</DeclaredIn>

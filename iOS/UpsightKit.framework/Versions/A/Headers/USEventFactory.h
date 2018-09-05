@@ -42,6 +42,15 @@
 */
 + (USAnalyticsEvent *)analyticsEventWithName:(NSString *)aName pubData:(NSDictionary *)aPubData;
 
+
+/** Creates an analytics event with the given name. You can provide any additional data you'd like to send as a dictionary of key->value pairs.
+ 
+ @param aName A publisher-defined string representing the event name.
+ @param aValue A Publisher-defined Number representing the generic value tied to the Event
+ @param aPubData A dictionary with additional data provided by the publisher.
+ */
++ (USAnalyticsEvent *)analyticsEventWithName:(NSString *)aName value:(NSNumber *) aValue pubData:(NSDictionary *)aPubData;
+
 /** Creates an event containing data collected from the user.
 
 @param aBundle A bundle with user data.

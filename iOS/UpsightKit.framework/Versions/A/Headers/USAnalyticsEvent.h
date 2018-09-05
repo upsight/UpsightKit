@@ -38,6 +38,14 @@ by means of `-[USAnalyticsInterface record:]` to track those events on your dash
 @return An event object.
 */
 - (instancetype)initWithParameters:(USEventParameters *)aParameters name:(NSString *)aName NS_DESIGNATED_INITIALIZER;
+/** Constructs an event object that encapsulates data representing an event in your application.
+ 
+ @param aParameters Event parameters.
+ @param aName User-defined event name. You are free to assign any name to events to logically group them together. For example you can create events with "monetization" name to group together events related to monetization. Note that `.` is a special symbol that can be used within event name to create a compound name, where every `.` represents one level of hierarchy. For example, `my_store.weapons` and `my_store.armor` allows you to get metrics on `my_store` as well as `my_store.weapons` and `my_store.armor` using the Upsight Dashboard.
+ @param aValue User defined Value to be stored in UpsightData to make queries against
+ @return An event object.
+ */
+- (instancetype)initWithParameters:(USEventParameters *)aParameters name:(NSString *)aName value:(NSNumber *)aValue;
 
 /** Event name which is the same that is passed on event creation.*/
 @property (nonatomic, strong, readonly) NSString *name;

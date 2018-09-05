@@ -39,6 +39,16 @@ For more details about adding the framework to your application, see the [integr
  */
 + (void)recordAnalyticsEventWithName:(NSString *)name properties:(NSDictionary *)properties;
 
+/** Sends information to the Upsight server representing events that happen within your application. An event
+ could be anything that is of some interest in your application, e.g. when a user clicks a
+ specific button, adds a friend, etc.
+ 
+ @param name User-defined event name. You are free to assign any name to events to logically group them together. For example you can create events with "monetization" name to group together events related to monetization. Note that `.` is a special symbol that can be used within event name to create a compound name, where every `.` represents one level of hierarchy. For example, `my_store.weapons` and `my_store.armor` allows you to get metrics on `my_store` as well as `my_store.weapons` and `my_store.armor` using the Upsight Dashboard.
+ @param Value A numeric value to associate to the event
+ @param properties A dictionary containing any information you would like to associate with this event.
+ */
++ (void)recordAnalyticsEventWithName:(NSString *)name value:(NSNumber*) value properties:(NSDictionary *)properties;
+
 /** Event representing a monetary transaction, in which the user is paying you for
  goods or services.
  

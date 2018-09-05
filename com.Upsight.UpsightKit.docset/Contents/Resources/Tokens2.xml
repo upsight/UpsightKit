@@ -56,6 +56,29 @@ by means of [USAnalyticsInterface record:] to track those events on your dashboa
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/USAnalyticsEvent/initWithParameters:name:value:</TokenIdentifier>
+			<Abstract type="html">Constructs an event object that encapsulates data representing an event in your application.</Abstract>
+			<DeclaredIn>USAnalyticsEvent.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithParameters:(USEventParameters *)aParameters name:(NSString *)aName value:(NSNumber *)aValue</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aParameters</Name>
+					<Abstract type="html">Event parameters.</Abstract>
+				</Parameter><Parameter>
+					<Name>aName</Name>
+					<Abstract type="html">User-defined event name. You are free to assign any name to events to logically group them together. For example you can create events with &quot;monetization&quot; name to group together events related to monetization. Note that . is a special symbol that can be used within event name to create a compound name, where every . represents one level of hierarchy. For example, mystore.weapons and mystore.armor allows you to get metrics on mystore as well as mystore.weapons and my_store.armor using the Upsight Dashboard.</Abstract>
+				</Parameter><Parameter>
+					<Name>aValue</Name>
+					<Abstract type="html">User defined Value to be stored in UpsightData to make queries against</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An event object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithParameters:name:value:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/USAnalyticsEvent/setName:</TokenIdentifier>
 			<Abstract type="html">Event name which is the same that is passed on event creation.</Abstract>
 			<DeclaredIn>USAnalyticsEvent.h</DeclaredIn>

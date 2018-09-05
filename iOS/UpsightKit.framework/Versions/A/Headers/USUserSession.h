@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Upsight.h"
 
 extern NSString * _Nonnull kUSUserSessionUserNameKey;
 typedef NS_ENUM(NSUInteger, USUserSessionErrorCodes) {
