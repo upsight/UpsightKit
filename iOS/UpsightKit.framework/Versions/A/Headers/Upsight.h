@@ -121,17 +121,17 @@ For more details about adding the framework to your application, see the [integr
 
 /** An event that to notifies the backend of the attribution source for a new install.
  
- @param aCampaign Advertising campaign associated with the install.
- @param aCreative Advertising creative associated with the install.
- @param aSource Advertising source associated with the install.
+ @param cmpaign Advertising campaign associated with the install.
+ @param creative Advertising creative associated with the install.
+ @param source Advertising source associated with the install.
  */
 + (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source;
 
 /** An event that to notifies the backend of the attribution source for a new install.
  
- @param aCampaign The campaign ID for this creative.
- @param aCreative The ID for the creative receiving attribution.
- @param aSource The network source for the creative.
+ @param campaign The campaign ID for this creative.
+ @param creative The ID for the creative receiving attribution.
+ @param source The network source for the creative.
  @param properties A dictionary containing any information you would like to associate with this event.
  */
 + (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source properties:(NSDictionary *)properties;

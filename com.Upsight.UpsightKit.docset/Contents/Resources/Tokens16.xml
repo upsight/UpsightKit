@@ -233,14 +233,14 @@ USPurchaseResolution enumeration or more details.</Abstract>
 			<Declaration>+ (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>aCampaign</Name>
-					<Abstract type="html">Advertising campaign associated with the install.</Abstract>
-				</Parameter><Parameter>
-					<Name>aCreative</Name>
+					<Name>creative</Name>
 					<Abstract type="html">Advertising creative associated with the install.</Abstract>
 				</Parameter><Parameter>
-					<Name>aSource</Name>
+					<Name>source</Name>
 					<Abstract type="html">Advertising source associated with the install.</Abstract>
+				</Parameter><Parameter>
+					<Name>cmpaign</Name>
+					<Abstract type="html">Advertising campaign associated with the install.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -256,17 +256,17 @@ USPurchaseResolution enumeration or more details.</Abstract>
 			<Declaration>+ (void)recordAttributionEventForCampaign:(NSString *)campaign creative:(NSString *)creative source:(NSString *)source properties:(NSDictionary *)properties</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>properties</Name>
-					<Abstract type="html">A dictionary containing any information you would like to associate with this event.</Abstract>
+					<Name>campaign</Name>
+					<Abstract type="html">The campaign ID for this creative.</Abstract>
 				</Parameter><Parameter>
-					<Name>aSource</Name>
-					<Abstract type="html">The network source for the creative.</Abstract>
-				</Parameter><Parameter>
-					<Name>aCreative</Name>
+					<Name>creative</Name>
 					<Abstract type="html">The ID for the creative receiving attribution.</Abstract>
 				</Parameter><Parameter>
-					<Name>aCampaign</Name>
-					<Abstract type="html">The campaign ID for this creative.</Abstract>
+					<Name>source</Name>
+					<Abstract type="html">The network source for the creative.</Abstract>
+				</Parameter><Parameter>
+					<Name>properties</Name>
+					<Abstract type="html">A dictionary containing any information you would like to associate with this event.</Abstract>
 				</Parameter>
 			</Parameters>
 			
